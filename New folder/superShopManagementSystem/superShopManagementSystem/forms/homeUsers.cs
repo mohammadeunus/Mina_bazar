@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace superShopManagementSystem.forms
 {
+
+
     public partial class homeUsers : Form
     {
         public homeUsers()
         {
             InitializeComponent();
+            label6.Text = "its a test";
+        }
+        
+
+        private void homeUsers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new homeUsers_login(1);
         }
     }
 }
