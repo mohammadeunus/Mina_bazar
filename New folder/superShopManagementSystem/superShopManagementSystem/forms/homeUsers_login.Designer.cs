@@ -1,6 +1,6 @@
-﻿namespace doctorapp2.forms
+﻿namespace superShopManagementSystem.forms
 {
-    partial class homeUser_admin
+    partial class homeUsers_login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // homeUser_admin
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "homeUser_admin";
-            this.Text = "homeUser_admin";
-            this.ResumeLayout(false);
-
+            this.Text = "homeUsers_login";
         }
 
         #endregion

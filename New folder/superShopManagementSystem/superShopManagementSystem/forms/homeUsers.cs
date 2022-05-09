@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace doctorapp2.forms
+namespace superShopManagementSystem.forms
 {
-    public partial class homeUser_admin : Form
+    public partial class homeUsers : Form
     {
-        public homeUser_admin()
+        public homeUsers()
         {
             InitializeComponent();
         }
