@@ -24,6 +24,8 @@ namespace superShopManagementSystem.forms
             InitializeComponent();
             loadform(ch1);
             radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
+
+            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
 
@@ -39,51 +41,43 @@ namespace superShopManagementSystem.forms
             this.mainPanelAdmin.Controls.Add(f);
             this.mainPanelAdmin.Tag = f;
             f.Show();
-        }
 
-        private void checkList_Click(object sender, EventArgs e)
-        {              
+        }
+        public void  radioCheck()
+        {
             if (radioButtonInventoryManager.Checked)
             {
                 radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
-                loadform(ch1);
-
             }
             if (radioButtonISalesManager.Checked)
             {
                 radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
-                loadform(ch1);
-            } 
+            }
+        }
+        private void checkList_Click(object sender, EventArgs e)
+        {            
+            radioCheck();
+            ch1 = new adminHomePage_CheckList();
+            loadform(ch1);
+
+            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void newEntry_Click(object sender, EventArgs e)
-        { 
-            if (radioButtonInventoryManager.Checked)
-            {
-                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
-                loadform(ch3);
+        {
+            radioCheck();
+            ch3 = new adminHomePage_newEntry();
+            loadform(ch3);
 
-            }
-            if(radioButtonISalesManager.Checked)
-            {
-                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
-                loadform(ch3);
-            } 
+            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void deleteEntry_Click(object sender, EventArgs e)
-        { 
-            if (radioButtonInventoryManager.Checked)
-            {
-                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
-                loadform(ch2);
-
-            }
-            if (radioButtonISalesManager.Checked)
-            {
-                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
-                loadform(ch2);
-            } 
+        {
+            radioCheck();
+            ch2 = new adminHomePage_deleteEntry();
+            loadform(ch2);
+            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void mainPanelAdmin_Paint(object sender, PaintEventArgs e)

@@ -26,13 +26,14 @@ namespace superShopManagementSystem.forms
             {
                 //querryadmin
                 querry = "SELECT * FROM salesman";
-                label1.Text = "AdminPage: salesMan's password List";
+                label1.Text = "AdminPage: salesMan's List";
+
             }
             else
             {
                 //inventory_login
                 querry = "SELECT * FROM inventory_login";
-                label1.Text = "AdminPage: salesMan's password List";
+                label1.Text = "AdminPage: inventory Manager's List";
             }
             SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
             DataTable ftable = new DataTable();

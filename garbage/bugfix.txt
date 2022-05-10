@@ -1,0 +1,2 @@
+1. try creating new object on every click event like bellow.
+    ch1 = new adminHomePage_CheckList();

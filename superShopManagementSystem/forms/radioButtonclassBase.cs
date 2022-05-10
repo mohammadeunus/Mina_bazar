@@ -6,10 +6,10 @@
         inventoryManager
 
     }
+    
     internal static class radioButtonclassBase
     {
-        internal static int salesManORmanager;
-        internal static ENUMsalesManORmanager optionRadio;
+        internal static ENUMsalesManORmanager optionRadio; 
     }
     
 }
