@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace superShopManagementSystem.forms
 {
-    public partial class inventoryHomePage : Form
+    public partial class inventoryHomePage_showStock : Form
     {
-        public inventoryHomePage()
+        public inventoryHomePage_showStock()
         {
             InitializeComponent();
-        }
-
-        private void logout_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
