@@ -157,6 +157,6 @@ namespace superShopManagementSystem.forms
         {
             hmp.Show();
             this.Hide();
-        }
+        } 
     }
 }
