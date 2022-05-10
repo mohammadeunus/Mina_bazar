@@ -90,7 +90,7 @@ namespace superShopManagementSystem.forms
                 try
                 {
                     Connection CN = new Connection();
-                    querry = "SELECT * FROM admin_login WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
+                    querry = "SELECT * FROM inventory_login WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
 
                     SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
 
@@ -105,7 +105,7 @@ namespace superShopManagementSystem.forms
                     }
                     else
                     {
-                        adminLoginInfo.Text = "Admin: username or password incorrect";
+                        adminLoginInfo.Text = "inventoryMananger: username or password incorrect";
                         userPassTextBox.Clear();
                     }
                     //this.Close();
@@ -113,7 +113,7 @@ namespace superShopManagementSystem.forms
                 }
                 catch (Exception ex)
                 {
-                    adminLoginInfo.Text = "Admin: Exception error: " + ex.ToString();
+                    adminLoginInfo.Text = "inventoryMananger: Exception error: " + ex.ToString();
                 }
 
             }
@@ -123,7 +123,7 @@ namespace superShopManagementSystem.forms
                 try
                 {
                     Connection CN = new Connection();
-                    querry = "SELECT * FROM admin_login WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
+                    querry = "SELECT * FROM salesman WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
 
                     SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
 
@@ -139,7 +139,7 @@ namespace superShopManagementSystem.forms
                     }
                     else
                     {
-                        adminLoginInfo.Text = "Admin: username or password incorrect";
+                        adminLoginInfo.Text = "salesman: username or password incorrect";
                         userPassTextBox.Clear();
                     }
                     //this.Close();
@@ -147,7 +147,7 @@ namespace superShopManagementSystem.forms
                 }
                 catch (Exception ex)
                 {
-                    adminLoginInfo.Text = "Admin: Exception error: " + ex.ToString();
+                    adminLoginInfo.Text = "salesman: Exception error: " + ex.ToString();
                 }
 
             }
