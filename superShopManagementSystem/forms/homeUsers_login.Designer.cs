@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.adminLoginInfo = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.login.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.login.Location = new System.Drawing.Point(304, 333);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(193, 34);
+            this.login.Size = new System.Drawing.Size(88, 34);
             this.login.TabIndex = 0;
             this.login.Text = "login";
             this.login.UseVisualStyleBackColor = true;
@@ -54,14 +55,15 @@
             // 
             // userPassTextBox
             // 
-            this.userPassTextBox.Location = new System.Drawing.Point(372, 280);
+            this.userPassTextBox.Location = new System.Drawing.Point(372, 285);
             this.userPassTextBox.Name = "userPassTextBox";
+            this.userPassTextBox.PasswordChar = 'X';
             this.userPassTextBox.Size = new System.Drawing.Size(125, 23);
             this.userPassTextBox.TabIndex = 2;
             // 
             // userIdTextBox
             // 
-            this.userIdTextBox.Location = new System.Drawing.Point(372, 251);
+            this.userIdTextBox.Location = new System.Drawing.Point(372, 256);
             this.userIdTextBox.Name = "userIdTextBox";
             this.userIdTextBox.Size = new System.Drawing.Size(125, 23);
             this.userIdTextBox.TabIndex = 3;
@@ -69,20 +71,22 @@
             // userId
             // 
             this.userId.AutoSize = true;
-            this.userId.Location = new System.Drawing.Point(304, 251);
+            this.userId.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.userId.Location = new System.Drawing.Point(303, 256);
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(38, 15);
+            this.userId.Size = new System.Drawing.Size(66, 17);
             this.userId.TabIndex = 4;
-            this.userId.Text = "label4";
+            this.userId.Text = "UserName";
             // 
             // userPass
             // 
             this.userPass.AutoSize = true;
-            this.userPass.Location = new System.Drawing.Point(304, 283);
+            this.userPass.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.userPass.Location = new System.Drawing.Point(303, 288);
             this.userPass.Name = "userPass";
-            this.userPass.Size = new System.Drawing.Size(38, 15);
+            this.userPass.Size = new System.Drawing.Size(64, 17);
             this.userPass.TabIndex = 27;
-            this.userPass.Text = "label6";
+            this.userPass.Text = "Password";
             // 
             // pictureBox1
             // 
@@ -97,13 +101,12 @@
             // adminLoginInfo
             // 
             this.adminLoginInfo.AutoSize = true;
-            this.adminLoginInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.adminLoginInfo.Location = new System.Drawing.Point(0, 435);
+            this.adminLoginInfo.ForeColor = System.Drawing.Color.IndianRed;
+            this.adminLoginInfo.Location = new System.Drawing.Point(195, 388);
             this.adminLoginInfo.Name = "adminLoginInfo";
-            this.adminLoginInfo.Size = new System.Drawing.Size(38, 15);
+            this.adminLoginInfo.Size = new System.Drawing.Size(10, 15);
             this.adminLoginInfo.TabIndex = 29;
-            this.adminLoginInfo.Text = "label1";
-            this.adminLoginInfo.Visible = false;
+            this.adminLoginInfo.Text = " ";
             // 
             // imageList1
             // 
@@ -114,11 +117,23 @@
             this.imageList1.Images.SetKeyName(1, "inventory.png");
             this.imageList1.Images.SetKeyName(2, "salesManager.png");
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(409, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 34);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // homeUsers_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.adminLoginInfo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userPass);
@@ -149,5 +164,6 @@
         private Label userPass;
         private PictureBox pictureBox1;
         private ImageList imageList1;
+        private Button button1;
     }
 }

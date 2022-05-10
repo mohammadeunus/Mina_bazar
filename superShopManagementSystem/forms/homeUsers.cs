@@ -27,7 +27,7 @@ namespace superShopManagementSystem.forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(1);
+            homeUsers_login oform = new homeUsers_login(this,1);
             oform.Show();
             this.Hide();
         }
@@ -39,14 +39,14 @@ namespace superShopManagementSystem.forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(2);
+            homeUsers_login oform = new homeUsers_login(this, 2);
             oform.Show();
             this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(3);
+            homeUsers_login oform = new homeUsers_login(this, 3);
             oform.Show();
             this.Hide();
         }
