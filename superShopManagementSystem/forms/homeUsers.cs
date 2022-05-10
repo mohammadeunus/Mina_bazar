@@ -50,5 +50,10 @@ namespace superShopManagementSystem.forms
             oform.Show();
             this.Hide();
         }
+
+        private void EXITpictureBox_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

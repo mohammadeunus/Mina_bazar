@@ -37,9 +37,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EXITpictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EXITpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -79,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(67, 92);
+            this.label2.Location = new System.Drawing.Point(139, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(314, 25);
             this.label2.TabIndex = 22;
@@ -89,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(67, 58);
+            this.label1.Location = new System.Drawing.Point(139, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(512, 34);
             this.label1.TabIndex = 21;
@@ -128,11 +130,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // EXITpictureBox
+            // 
+            this.EXITpictureBox.Image = ((System.Drawing.Image)(resources.GetObject("EXITpictureBox.Image")));
+            this.EXITpictureBox.Location = new System.Drawing.Point(56, 57);
+            this.EXITpictureBox.Name = "EXITpictureBox";
+            this.EXITpictureBox.Size = new System.Drawing.Size(89, 59);
+            this.EXITpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EXITpictureBox.TabIndex = 26;
+            this.EXITpictureBox.TabStop = false;
+            this.EXITpictureBox.Click += new System.EventHandler(this.EXITpictureBox_Click);
+            // 
             // homeUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EXITpictureBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -149,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EXITpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +178,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private PictureBox EXITpictureBox;
     }
 }
