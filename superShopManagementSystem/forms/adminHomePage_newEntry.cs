@@ -24,11 +24,15 @@ namespace superShopManagementSystem.forms
             Connection CN = new Connection();
             if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
             {
+                //title
+                label1.Text = "AdminPage: salesMan New Entry";
                 //querrySalesMan
                 sp_insert = "INSERT INTO salesman (ID, PASS) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "'); ";
             }
             else
             {
+                //title
+                label1.Text = "AdminPage: inventoryManager New Entry";
                 //querry inventory_manager
                 sp_insert = "INSERT INTO inventory_login (ID, PASS) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "'); ";
             }
@@ -42,6 +46,11 @@ namespace superShopManagementSystem.forms
             {
                 ERRORLABEL.Text = i + " Data Saved";
             }
+        }
+
+        private void adminHomePage_newEntry_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

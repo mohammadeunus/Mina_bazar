@@ -68,7 +68,6 @@ namespace superShopManagementSystem.forms
             radioCheck();
             ch3 = new adminHomePage_newEntry();
             loadform(ch3);
-
             label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 

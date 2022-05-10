@@ -40,7 +40,7 @@
             this.ERRORLABEL.AutoSize = true;
             this.ERRORLABEL.BackColor = System.Drawing.Color.IndianRed;
             this.ERRORLABEL.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.ERRORLABEL.Location = new System.Drawing.Point(265, 324);
+            this.ERRORLABEL.Location = new System.Drawing.Point(212, 321);
             this.ERRORLABEL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ERRORLABEL.Name = "ERRORLABEL";
             this.ERRORLABEL.Size = new System.Drawing.Size(0, 17);
@@ -49,7 +49,7 @@
             // DeleteManagerButton
             // 
             this.DeleteManagerButton.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.DeleteManagerButton.Location = new System.Drawing.Point(255, 257);
+            this.DeleteManagerButton.Location = new System.Drawing.Point(202, 254);
             this.DeleteManagerButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DeleteManagerButton.Name = "DeleteManagerButton";
             this.DeleteManagerButton.Size = new System.Drawing.Size(282, 32);
@@ -61,7 +61,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(252, 199);
+            this.label2.Location = new System.Drawing.Point(199, 196);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
@@ -70,7 +70,7 @@
             // 
             // DeleteIdBoxManager
             // 
-            this.DeleteIdBoxManager.Location = new System.Drawing.Point(360, 196);
+            this.DeleteIdBoxManager.Location = new System.Drawing.Point(307, 193);
             this.DeleteIdBoxManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DeleteIdBoxManager.Name = "DeleteIdBoxManager";
             this.DeleteIdBoxManager.Size = new System.Drawing.Size(191, 23);
@@ -80,7 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(250, 110);
+            this.label1.Location = new System.Drawing.Point(197, 107);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 27);
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.ERRORLABEL);
             this.Controls.Add(this.DeleteManagerButton);
             this.Controls.Add(this.label2);
