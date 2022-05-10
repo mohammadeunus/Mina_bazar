@@ -13,7 +13,7 @@ namespace superShopManagementSystem.forms
 {
     public partial class adminHomePage_deleteEntry : Form
     {
-        string sp_delete;
+        string? sp_delete;
         public adminHomePage_deleteEntry()
         {
             InitializeComponent();
