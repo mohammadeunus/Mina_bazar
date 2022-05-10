@@ -1,3 +1,5 @@
 1. try creating new object on every click event like bellow.
     ch1 = new adminHomePage_CheckList();
-2.
+2.to save memory try dispose, which is alternative to destructor.
+    reference: https://www.oreilly.com/library/view/programming-c-second/0596003099/ch04s04.html
+3.
