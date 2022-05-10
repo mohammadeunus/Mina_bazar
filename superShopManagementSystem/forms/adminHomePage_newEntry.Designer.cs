@@ -64,7 +64,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(174, 199);
+            this.label3.Location = new System.Drawing.Point(173, 196);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(176, 166);
+            this.label2.Location = new System.Drawing.Point(175, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 17);
@@ -84,7 +84,7 @@
             // 
             // EntryIdManager
             // 
-            this.EntryIdManager.Location = new System.Drawing.Point(262, 162);
+            this.EntryIdManager.Location = new System.Drawing.Point(261, 159);
             this.EntryIdManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryIdManager.Name = "EntryIdManager";
             this.EntryIdManager.Size = new System.Drawing.Size(177, 23);
@@ -92,7 +92,7 @@
             // 
             // EntryPassBoxManager
             // 
-            this.EntryPassBoxManager.Location = new System.Drawing.Point(262, 197);
+            this.EntryPassBoxManager.Location = new System.Drawing.Point(261, 194);
             this.EntryPassBoxManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryPassBoxManager.Name = "EntryPassBoxManager";
             this.EntryPassBoxManager.PasswordChar = 'x';

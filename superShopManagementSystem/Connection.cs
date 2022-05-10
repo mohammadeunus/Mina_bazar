@@ -9,6 +9,7 @@ using System.Data;
 
 namespace superShopManagementSystem
 {
+
     internal class Connection
     {
 

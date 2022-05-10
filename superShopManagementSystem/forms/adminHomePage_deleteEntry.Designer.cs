@@ -56,6 +56,7 @@
             this.DeleteManagerButton.TabIndex = 30;
             this.DeleteManagerButton.Text = "delete user";
             this.DeleteManagerButton.UseVisualStyleBackColor = true;
+            this.DeleteManagerButton.Click += new System.EventHandler(this.DeleteManagerButton_Click);
             // 
             // label2
             // 

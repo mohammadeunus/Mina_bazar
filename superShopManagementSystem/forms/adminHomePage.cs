@@ -25,7 +25,6 @@ namespace superShopManagementSystem.forms
             loadform(ch1);
             radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
 
-            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
 
@@ -60,7 +59,6 @@ namespace superShopManagementSystem.forms
             ch1 = new adminHomePage_CheckList();
             loadform(ch1);
 
-            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void newEntry_Click(object sender, EventArgs e)
@@ -68,7 +66,6 @@ namespace superShopManagementSystem.forms
             radioCheck();
             ch3 = new adminHomePage_newEntry();
             loadform(ch3);
-            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void deleteEntry_Click(object sender, EventArgs e)
@@ -76,7 +73,6 @@ namespace superShopManagementSystem.forms
             radioCheck();
             ch2 = new adminHomePage_deleteEntry();
             loadform(ch2);
-            label1.Text = radioButtonclassBase.optionRadio.ToString();
         }
 
         private void mainPanelAdmin_Paint(object sender, PaintEventArgs e)
