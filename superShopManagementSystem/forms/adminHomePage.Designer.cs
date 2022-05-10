@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminHomePage));
             this.mainPanelAdmin = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButtonISalesManager = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonInventoryManager = new System.Windows.Forms.RadioButton();
+            this.radioButtonISalesManager = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.Button();
             this.deleteEntry = new System.Windows.Forms.Button();
             this.newEntry = new System.Windows.Forms.Button();
             this.checkList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,9 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.radioButtonISalesManager);
-            this.panel1.Controls.Add(this.radioButtonInventoryManager);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.logout);
             this.panel1.Controls.Add(this.deleteEntry);
@@ -71,36 +70,40 @@
             this.panel1.Size = new System.Drawing.Size(176, 493);
             this.panel1.TabIndex = 4;
             // 
-            // label1
+            // groupBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 15);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "...";
-            // 
-            // radioButtonISalesManager
-            // 
-            this.radioButtonISalesManager.AutoSize = true;
-            this.radioButtonISalesManager.Location = new System.Drawing.Point(24, 71);
-            this.radioButtonISalesManager.Name = "radioButtonISalesManager";
-            this.radioButtonISalesManager.Size = new System.Drawing.Size(97, 19);
-            this.radioButtonISalesManager.TabIndex = 6;
-            this.radioButtonISalesManager.TabStop = true;
-            this.radioButtonISalesManager.Text = "salesManager";
-            this.radioButtonISalesManager.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.radioButtonInventoryManager);
+            this.groupBox1.Controls.Add(this.radioButtonISalesManager);
+            this.groupBox1.Location = new System.Drawing.Point(17, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(136, 72);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "select option";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButtonInventoryManager
             // 
             this.radioButtonInventoryManager.AutoSize = true;
-            this.radioButtonInventoryManager.Location = new System.Drawing.Point(24, 46);
+            this.radioButtonInventoryManager.Checked = true;
+            this.radioButtonInventoryManager.Location = new System.Drawing.Point(7, 22);
             this.radioButtonInventoryManager.Name = "radioButtonInventoryManager";
             this.radioButtonInventoryManager.Size = new System.Drawing.Size(122, 19);
             this.radioButtonInventoryManager.TabIndex = 5;
             this.radioButtonInventoryManager.TabStop = true;
             this.radioButtonInventoryManager.Text = "inventoryManager";
             this.radioButtonInventoryManager.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonISalesManager
+            // 
+            this.radioButtonISalesManager.AutoSize = true;
+            this.radioButtonISalesManager.Location = new System.Drawing.Point(7, 47);
+            this.radioButtonISalesManager.Name = "radioButtonISalesManager";
+            this.radioButtonISalesManager.Size = new System.Drawing.Size(97, 19);
+            this.radioButtonISalesManager.TabIndex = 6;
+            this.radioButtonISalesManager.TabStop = true;
+            this.radioButtonISalesManager.Text = "salesManager";
+            this.radioButtonISalesManager.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -173,7 +176,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminHomePage";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -190,6 +194,6 @@
         private Button checkList;
         private RadioButton radioButtonISalesManager;
         private RadioButton radioButtonInventoryManager;
-        private Label label1;
+        private GroupBox groupBox1;
     }
 }

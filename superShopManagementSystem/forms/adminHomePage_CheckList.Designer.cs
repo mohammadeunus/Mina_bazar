@@ -53,6 +53,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(561, 232);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // refresh
             // 
@@ -64,6 +65,7 @@
             this.refresh.TabIndex = 7;
             this.refresh.Text = "Refresh";
             this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
             // adminHomePage_CheckList
             // 

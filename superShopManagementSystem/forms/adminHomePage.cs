@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace superShopManagementSystem.forms
 {
+
     public partial class adminHomePage : Form
     {
         homeUsers hmpg;
@@ -21,9 +22,11 @@ namespace superShopManagementSystem.forms
         {
             this.hmpg = homePage;
             InitializeComponent();
-            loadform(ch1); 
-            radioButtonInventoryManager.Focus();
+            loadform(ch1);
+            radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
         }
+
+
         public void loadform(object Form)
         {
             if (this.mainPanelAdmin.Controls.Count > 0)
@@ -37,71 +40,50 @@ namespace superShopManagementSystem.forms
             this.mainPanelAdmin.Tag = f;
             f.Show();
         }
-        private bool radioButtonCheck()
-        {
-            if (radioButtonInventoryManager.Checked == false || radioButtonInventoryManager.Checked == false)
-            {
-                /*check whether the radio button is pressed or not
-                 */
-                label1.Text = "cant be unchecked";
-                return false;
-            }
-            return true;
-
-        }
 
         private void checkList_Click(object sender, EventArgs e)
-        {
-                        
-            if(radioButtonCheck()==true)
-            { 
-                if (radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch1);
+        {              
+            if (radioButtonInventoryManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
+                loadform(ch1);
 
-                }
-                if (radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch1);
-                }
             }
+            if (radioButtonISalesManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
+                loadform(ch1);
+            } 
         }
 
         private void newEntry_Click(object sender, EventArgs e)
-        {
-            if (radioButtonCheck() == true)
-            { 
-                if (radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch3);
-
-                }
-                if(radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch3);
-                }
-
+        { 
+            if (radioButtonInventoryManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
+                loadform(ch3);
 
             }
-
+            if(radioButtonISalesManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
+                loadform(ch3);
+            } 
         }
 
         private void deleteEntry_Click(object sender, EventArgs e)
-        {
-            if (radioButtonCheck() == true)
-            { 
-                if (radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch2);
-
-                }
-                if (radioButtonInventoryManager.Checked)
-                {
-                    loadform(ch2);
-                }
+        { 
+            if (radioButtonInventoryManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.inventoryManager;
+                loadform(ch2);
 
             }
-
+            if (radioButtonISalesManager.Checked)
+            {
+                radioButtonclassBase.optionRadio = ENUMsalesManORmanager.salesMan;
+                loadform(ch2);
+            } 
         }
 
         private void mainPanelAdmin_Paint(object sender, PaintEventArgs e)
@@ -113,6 +95,16 @@ namespace superShopManagementSystem.forms
         {
             hmpg.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
