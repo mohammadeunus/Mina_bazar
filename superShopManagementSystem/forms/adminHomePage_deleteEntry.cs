@@ -21,36 +21,44 @@ namespace superShopManagementSystem.forms
 
         private void DeleteManagerButton_Click(object sender, EventArgs e)
         {
-
-            Connection CN = new Connection();
-            if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+            try
             {
-                //title
-                label1.Text = "AdminPage: salesMan New Entry";
-                //querrySalesMan
-                sp_delete = "Delete from salesman where ID= '" + this.DeleteIdBoxManager.Text + "'";
+                Connection CN = new Connection();
+                if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+                {
+                    //title
+                    label1.Text = "AdminPage: salesMan New Entry";
+                    //querrySalesMan
+                    sp_delete = "Delete from salesman where ID= '" + this.DeleteIdBoxManager.Text + "'";
+                }
+                else
+                {
+                    //title
+                    label1.Text = "AdminPage: inventoryManager New Entry";
+                    //querry inventory_manager
+                    sp_delete = "Delete from inventory_login where ID= '" + this.DeleteIdBoxManager.Text + "'";
+                }
+
+                CN.thisConnection.Open();
+                SqlCommand cmd = new SqlCommand(sp_delete, CN.thisConnection);
+
+
+                int i = cmd.ExecuteNonQuery();
+
+                CN.thisConnection.Close();
+                if (i < 1)
+                {
+                    ERRORLABEL.Text = "data not found";
+                }
+
+                CN.thisConnection.Close();
+
             }
-            else
+            catch (Exception ex)
             {
-                //title
-                label1.Text = "AdminPage: inventoryManager New Entry";
-                //querry inventory_manager
-                sp_delete = "Delete from inventory_login where ID= '" + this.DeleteIdBoxManager.Text + "'";
+                ERRORLABEL.Text = ex.ToString();
             }
 
-            CN.thisConnection.Open();
-            SqlCommand cmd = new SqlCommand(sp_delete, CN.thisConnection);
-
-
-            int i = cmd.ExecuteNonQuery();
-
-            CN.thisConnection.Close();
-            if (i < 1)
-            {
-                ERRORLABEL.Text = "data not found";
-            }
-
-            CN.thisConnection.Close();
 
         }
     }
