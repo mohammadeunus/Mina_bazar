@@ -58,12 +58,13 @@
             this.createButton.TabIndex = 26;
             this.createButton.Text = "create";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(252, 206);
+            this.label3.Location = new System.Drawing.Point(263, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -74,35 +75,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(252, 173);
+            this.label2.Location = new System.Drawing.Point(265, 173);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.Size = new System.Drawing.Size(21, 17);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Manager id";
+            this.label2.Text = "id";
             // 
             // EntryIdManager
             // 
-            this.EntryIdManager.Location = new System.Drawing.Point(360, 169);
+            this.EntryIdManager.Location = new System.Drawing.Point(351, 169);
             this.EntryIdManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryIdManager.Name = "EntryIdManager";
-            this.EntryIdManager.Size = new System.Drawing.Size(191, 23);
+            this.EntryIdManager.Size = new System.Drawing.Size(177, 23);
             this.EntryIdManager.TabIndex = 23;
             // 
             // EntryPassBoxManager
             // 
-            this.EntryPassBoxManager.Location = new System.Drawing.Point(360, 204);
+            this.EntryPassBoxManager.Location = new System.Drawing.Point(351, 204);
             this.EntryPassBoxManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryPassBoxManager.Name = "EntryPassBoxManager";
             this.EntryPassBoxManager.PasswordChar = 'x';
-            this.EntryPassBoxManager.Size = new System.Drawing.Size(191, 23);
+            this.EntryPassBoxManager.Size = new System.Drawing.Size(177, 23);
             this.EntryPassBoxManager.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(250, 109);
+            this.label1.Location = new System.Drawing.Point(253, 109);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(292, 27);

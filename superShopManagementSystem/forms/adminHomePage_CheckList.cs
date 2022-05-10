@@ -24,7 +24,7 @@ namespace superShopManagementSystem.forms
             Connection CN = new Connection();
             if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
             {
-                //querryadmin
+                //querrySalesMan
                 querry = "SELECT * FROM salesman";
                 label1.Text = "AdminPage: salesMan's List";
 
@@ -51,6 +51,11 @@ namespace superShopManagementSystem.forms
         private void refresh_Click(object sender, EventArgs e)
         {
             datashow();
+        }
+
+        private void adminHomePage_CheckList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

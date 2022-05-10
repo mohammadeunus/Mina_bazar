@@ -64,6 +64,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminHomePage_CheckList";
             this.Text = "adminHomePage_CheckList";
+            this.Load += new System.EventHandler(this.adminHomePage_CheckList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
