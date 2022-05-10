@@ -12,9 +12,17 @@ namespace superShopManagementSystem.forms
 {
     public partial class adminHomePage : Form
     {
-        public adminHomePage()
+        homeUsers hmpg;
+
+        adminHomePage_CheckList ch1 = new adminHomePage_CheckList();
+        adminHomePage_deleteEntry ch2 = new adminHomePage_deleteEntry();
+        adminHomePage_newEntry ch3 = new adminHomePage_newEntry();
+        public adminHomePage(homeUsers homePage)
         {
+            this.hmpg = homePage;
             InitializeComponent();
+            loadform(ch1); 
+            radioButtonInventoryManager.Focus();
         }
         public void loadform(object Form)
         {
@@ -22,56 +30,55 @@ namespace superShopManagementSystem.forms
             {
                 this.mainPanelAdmin.Controls.RemoveAt(0);
             }
-            Form? f = Form as Form;
+            Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainPanelAdmin.Controls.Add(f);
             this.mainPanelAdmin.Tag = f;
             f.Show();
         }
-
-        private void checkList_Click(object sender, EventArgs e)
+        private bool radioButtonCheck()
         {
-            if (!radioButtonInventoryManager.Checked || !radioButtonISalesManager.Checked)
+            if (radioButtonInventoryManager.Checked == false || radioButtonInventoryManager.Checked == false)
             {
                 /*check whether the radio button is pressed or not
                  */
-                errorProvider1.SetError(radioButtonInventoryManager, "cant be unchecked");
-                radioButtonInventoryManager.Focus();
-                
+                label1.Text = "cant be unchecked";
+                return false;
             }
-            else
-            {
-                errorProvider1.Clear();
+            return true;
+
+        }
+
+        private void checkList_Click(object sender, EventArgs e)
+        {
+                        
+            if(radioButtonCheck()==true)
+            { 
                 if (radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch1);
 
                 }
                 if (radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch1);
                 }
             }
         }
 
         private void newEntry_Click(object sender, EventArgs e)
         {
-            if (!radioButtonInventoryManager.Checked || !radioButtonISalesManager.Checked)
-            {
-                /*check whether the radio button is pressed or not
-                 */
-                errorProvider1.SetError(radioButtonInventoryManager, "cant be unchecked");
-                radioButtonInventoryManager.Focus();
-
-            }
-            else
-            {
-                errorProvider1.Clear();
+            if (radioButtonCheck() == true)
+            { 
                 if (radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch3);
 
                 }
                 if(radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch3);
                 }
 
 
@@ -81,27 +88,31 @@ namespace superShopManagementSystem.forms
 
         private void deleteEntry_Click(object sender, EventArgs e)
         {
-            if (!radioButtonInventoryManager.Checked || !radioButtonISalesManager.Checked)
-            {
-                /*check whether the radio button is pressed or not
-                 */
-                errorProvider1.SetError(radioButtonInventoryManager, "cant be unchecked");
-                radioButtonInventoryManager.Focus();
-
-            }
-            else
-            {
-                errorProvider1.Clear();
+            if (radioButtonCheck() == true)
+            { 
                 if (radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch2);
 
                 }
                 if (radioButtonInventoryManager.Checked)
                 {
+                    loadform(ch2);
                 }
 
             }
 
+        }
+
+        private void mainPanelAdmin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            hmpg.Show();
+            this.Hide();
         }
     }
 }

@@ -65,7 +65,7 @@ namespace superShopManagementSystem.forms
                     sda.Fill(dtable);
                     if (dtable.Rows.Count > 0)
                     {
-                        adminHomePage oform = new adminHomePage();
+                        adminHomePage oform = new adminHomePage(hmp);
                         oform.Show();
                         userPassTextBox.Clear();
                         this.Hide();
