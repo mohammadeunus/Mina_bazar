@@ -35,9 +35,9 @@
             this.userIdTextBox = new System.Windows.Forms.TextBox();
             this.userId = new System.Windows.Forms.Label();
             this.userPass = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.adminLoginInfo = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,15 +84,6 @@
             this.userPass.TabIndex = 27;
             this.userPass.Text = "label6";
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Admin.png");
-            this.imageList1.Images.SetKeyName(1, "inventory.png");
-            this.imageList1.Images.SetKeyName(2, "salesManager.png");
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -113,6 +104,15 @@
             this.adminLoginInfo.TabIndex = 29;
             this.adminLoginInfo.Text = "label1";
             this.adminLoginInfo.Visible = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth16Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Admin.png");
+            this.imageList1.Images.SetKeyName(1, "inventory.png");
+            this.imageList1.Images.SetKeyName(2, "salesManager.png");
             // 
             // homeUsers_login
             // 
@@ -147,7 +147,7 @@
         private Label label3;
         private Label userId;
         private Label userPass;
-        private ImageList imageList1;
         private PictureBox pictureBox1;
+        private ImageList imageList1;
     }
 }
