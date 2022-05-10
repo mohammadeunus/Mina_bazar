@@ -17,7 +17,6 @@ namespace superShopManagementSystem.forms
         public homeUsers()
         {
             InitializeComponent();
-            label6.Text = "its a test";
         }
         
 
@@ -28,7 +27,28 @@ namespace superShopManagementSystem.forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new homeUsers_login(1);
+            homeUsers_login oform = new homeUsers_login(1);
+            oform.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            homeUsers_login oform = new homeUsers_login(2);
+            oform.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            homeUsers_login oform = new homeUsers_login(3);
+            oform.Show();
+            this.Hide();
         }
     }
 }
