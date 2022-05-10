@@ -83,7 +83,7 @@ namespace superShopManagementSystem.forms
         private void logout_Click(object sender, EventArgs e)
         {
             hmpg.Show();
-            this.Hide();
+            this.Hide(); 
         }
 
         private void label1_Click(object sender, EventArgs e)

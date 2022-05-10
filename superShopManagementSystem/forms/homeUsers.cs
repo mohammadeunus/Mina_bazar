@@ -14,6 +14,7 @@ namespace superShopManagementSystem.forms
 
     public partial class homeUsers : Form
     {
+        homeUsers_login oform; 
         public homeUsers()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace superShopManagementSystem.forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(this,1);
+            oform = new homeUsers_login(this,1);
             oform.Show();
             this.Hide();
         }
@@ -39,16 +40,16 @@ namespace superShopManagementSystem.forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(this, 2);
+            oform = new homeUsers_login(this, 2);
             oform.Show();
-            this.Hide();
+            this.Hide(); 
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            homeUsers_login oform = new homeUsers_login(this, 3);
+            oform = new homeUsers_login(this, 3);
             oform.Show();
-            this.Hide();
+            this.Hide(); 
         }
 
         private void EXITpictureBox_Click(object sender, EventArgs e)

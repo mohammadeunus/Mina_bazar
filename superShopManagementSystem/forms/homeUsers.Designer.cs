@@ -34,13 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salesManPictureBox = new System.Windows.Forms.PictureBox();
+            this.managerPictureBox = new System.Windows.Forms.PictureBox();
+            this.adminPictureBox = new System.Windows.Forms.PictureBox();
             this.EXITpictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesManPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EXITpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,38 +97,38 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Welcome to Super Shop Management System";
             // 
-            // pictureBox3
+            // salesManPictureBox
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(387, 120);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(133, 239);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.salesManPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("salesManPictureBox.Image")));
+            this.salesManPictureBox.Location = new System.Drawing.Point(387, 120);
+            this.salesManPictureBox.Name = "salesManPictureBox";
+            this.salesManPictureBox.Size = new System.Drawing.Size(133, 239);
+            this.salesManPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.salesManPictureBox.TabIndex = 20;
+            this.salesManPictureBox.TabStop = false;
+            this.salesManPictureBox.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox2
+            // managerPictureBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(223, 126);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(146, 233);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.managerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("managerPictureBox.Image")));
+            this.managerPictureBox.Location = new System.Drawing.Point(223, 126);
+            this.managerPictureBox.Name = "managerPictureBox";
+            this.managerPictureBox.Size = new System.Drawing.Size(146, 233);
+            this.managerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.managerPictureBox.TabIndex = 19;
+            this.managerPictureBox.TabStop = false;
+            this.managerPictureBox.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // adminPictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 126);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 233);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.adminPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adminPictureBox.Image")));
+            this.adminPictureBox.Location = new System.Drawing.Point(73, 126);
+            this.adminPictureBox.Name = "adminPictureBox";
+            this.adminPictureBox.Size = new System.Drawing.Size(133, 233);
+            this.adminPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.adminPictureBox.TabIndex = 18;
+            this.adminPictureBox.TabStop = false;
+            this.adminPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // EXITpictureBox
             // 
@@ -152,17 +152,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.salesManPictureBox);
+            this.Controls.Add(this.managerPictureBox);
+            this.Controls.Add(this.adminPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "homeUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "homeUsers";
             this.Load += new System.EventHandler(this.homeUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesManPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.managerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adminPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EXITpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,9 +175,9 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox salesManPictureBox;
+        private PictureBox managerPictureBox;
+        private PictureBox adminPictureBox;
         private PictureBox EXITpictureBox;
     }
 }
