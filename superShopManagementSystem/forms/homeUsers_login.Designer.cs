@@ -45,9 +45,9 @@
             // login
             // 
             this.login.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.login.Location = new System.Drawing.Point(304, 333);
+            this.login.Location = new System.Drawing.Point(309, 359);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(88, 34);
+            this.login.Size = new System.Drawing.Size(106, 33);
             this.login.TabIndex = 0;
             this.login.Text = "login";
             this.login.UseVisualStyleBackColor = true;
@@ -55,24 +55,24 @@
             // 
             // userPassTextBox
             // 
-            this.userPassTextBox.Location = new System.Drawing.Point(372, 285);
+            this.userPassTextBox.Location = new System.Drawing.Point(377, 311);
             this.userPassTextBox.Name = "userPassTextBox";
             this.userPassTextBox.PasswordChar = 'X';
-            this.userPassTextBox.Size = new System.Drawing.Size(125, 23);
+            this.userPassTextBox.Size = new System.Drawing.Size(150, 23);
             this.userPassTextBox.TabIndex = 2;
             // 
             // userIdTextBox
             // 
-            this.userIdTextBox.Location = new System.Drawing.Point(372, 256);
+            this.userIdTextBox.Location = new System.Drawing.Point(377, 282);
             this.userIdTextBox.Name = "userIdTextBox";
-            this.userIdTextBox.Size = new System.Drawing.Size(125, 23);
+            this.userIdTextBox.Size = new System.Drawing.Size(150, 23);
             this.userIdTextBox.TabIndex = 3;
             // 
             // userId
             // 
             this.userId.AutoSize = true;
             this.userId.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.userId.Location = new System.Drawing.Point(303, 256);
+            this.userId.Location = new System.Drawing.Point(308, 282);
             this.userId.Name = "userId";
             this.userId.Size = new System.Drawing.Size(66, 17);
             this.userId.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.userPass.AutoSize = true;
             this.userPass.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.userPass.Location = new System.Drawing.Point(303, 288);
+            this.userPass.Location = new System.Drawing.Point(308, 314);
             this.userPass.Name = "userPass";
             this.userPass.Size = new System.Drawing.Size(64, 17);
             this.userPass.TabIndex = 27;
@@ -91,9 +91,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(304, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(309, 61);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(218, 201);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -120,9 +120,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(409, 333);
+            this.button1.Location = new System.Drawing.Point(421, 359);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 34);
+            this.button1.Size = new System.Drawing.Size(106, 33);
             this.button1.TabIndex = 30;
             this.button1.Text = "back";
             this.button1.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(865, 494);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.adminLoginInfo);
             this.Controls.Add(this.pictureBox1);
