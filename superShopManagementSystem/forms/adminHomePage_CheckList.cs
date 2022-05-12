@@ -21,22 +21,29 @@ namespace superShopManagementSystem.forms
         }
         private void datashow()
         {
-            Connection CN = new Connection();
-            if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+            try
             {
-                //querrySalesMan
-                querry = "SELECT * FROM salesman_login"; 
+                Connection CN = new Connection();
+                if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+                {
+                    //querrySalesMan
+                    querry = "SELECT * FROM salesman_login";
+                }
+                else
+                {
+                    //inventory_login
+                    querry = "SELECT * FROM inventory_login";
+                }
+                SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
+                DataTable ftable = new DataTable();
+                sda.Fill(ftable);
+                dataGridView1.DataSource = ftable;
+                CN.thisConnection.Close();
             }
-            else
+            catch (Exception ex)
             {
-                //inventory_login
-                querry = "SELECT * FROM inventory_login"; 
-            }
-            SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
-            DataTable ftable = new DataTable();
-            sda.Fill(ftable);
-            dataGridView1.DataSource = ftable;
-            CN.thisConnection.Close();
+                MessageBox.Show(ex.Message);
+            }  
 
         }
 

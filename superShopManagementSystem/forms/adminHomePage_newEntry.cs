@@ -51,7 +51,7 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
-                ERRORLABEL.Text = "insert_sql_newId exception: "+ex.ToString();
+                MessageBox.Show(ex.Message);
             }
         }
 

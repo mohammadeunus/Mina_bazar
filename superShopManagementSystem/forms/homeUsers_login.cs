@@ -84,7 +84,7 @@ namespace superShopManagementSystem.forms
                 }
                 catch (Exception ex)
                 {
-                    adminLoginInfo.Text = "Admin: Exception error: " + ex.ToString();
+                    MessageBox.Show("admin, exception: "+ex.Message);
                 }
             }
             else if (usertipe == 2)//user is inventoryManager
@@ -116,7 +116,7 @@ namespace superShopManagementSystem.forms
                 }
                 catch (Exception ex)
                 {
-                    adminLoginInfo.Text = "inventoryMananger: Exception error: " + ex.ToString();
+                    MessageBox.Show(" inventoryMananger: Exception error:"+ ex.Message);
                 }
 
             }
@@ -152,7 +152,7 @@ namespace superShopManagementSystem.forms
                 }
                 catch (Exception ex)
                 {
-                    adminLoginInfo.Text = "salesman: Exception error: " + ex.ToString();
+                    MessageBox.Show("salesman: Exception error: " + ex.Message);
                 }
 
             }

@@ -52,7 +52,7 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
-                ERRORLABEL.Text = ex.ToString();
+                MessageBox.Show(ex.Message);
             }
 
 
