@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace superShopManagementSystem.forms
 {
+    
     public partial class inventoryHomePage : Form
     {
-        public inventoryHomePage()
+        homeUsers hmpg;
+        public inventoryHomePage(homeUsers homePage)
         {
+            this.hmpg = homePage;
             InitializeComponent();
         }
 
         private void logout_Click(object sender, EventArgs e)
         {
-
+            hmpg.Show();
+            this.Hide();
         }
     }
 }

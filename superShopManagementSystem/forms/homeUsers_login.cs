@@ -98,7 +98,7 @@ namespace superShopManagementSystem.forms
                     sda.Fill(dtable);
                     if (dtable.Rows.Count > 0)
                     {
-                        inventoryHomePage oform = new inventoryHomePage();
+                        inventoryHomePage oform = new inventoryHomePage(hmp);
                         oform.Show();
                         userPassTextBox.Clear();
                         this.Hide();
