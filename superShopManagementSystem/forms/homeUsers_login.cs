@@ -123,7 +123,7 @@ namespace superShopManagementSystem.forms
                 try
                 {
                     Connection CN = new Connection();
-                    querry = "SELECT * FROM salesman WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
+                    querry = "SELECT * FROM salesman_login WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
 
                     SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
 
