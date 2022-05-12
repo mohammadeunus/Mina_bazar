@@ -47,6 +47,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.mainPanelManagerPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,10 +97,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(60, 141);
+            this.button2.Location = new System.Drawing.Point(60, 152);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 31);
+            this.button2.Size = new System.Drawing.Size(127, 33);
             this.button2.TabIndex = 2;
             this.button2.Text = "Add product";
             this.button2.UseVisualStyleBackColor = true;
@@ -103,10 +108,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(644, 244);
+            this.button1.Location = new System.Drawing.Point(644, 284);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 52);
+            this.button1.Size = new System.Drawing.Size(73, 54);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
@@ -115,6 +120,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -133,14 +143,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 461);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(644, 319);
+            this.button3.Location = new System.Drawing.Point(644, 359);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 97);
+            this.button3.Size = new System.Drawing.Size(73, 99);
             this.button3.TabIndex = 3;
             this.button3.Text = "Print";
             this.button3.UseVisualStyleBackColor = true;
@@ -148,10 +159,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(160, 178);
+            this.button4.Location = new System.Drawing.Point(160, 189);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 33);
+            this.button4.Size = new System.Drawing.Size(63, 35);
             this.button4.TabIndex = 4;
             this.button4.Text = "Refresh";
             this.button4.UseVisualStyleBackColor = true;
@@ -159,25 +170,25 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(282, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(282, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(435, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(435, 159);
             this.dataGridView1.TabIndex = 5;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 217);
+            this.dataGridView2.Location = new System.Drawing.Point(20, 232);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(203, 241);
+            this.dataGridView2.Size = new System.Drawing.Size(203, 226);
             this.dataGridView2.TabIndex = 6;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 183);
+            this.comboBox1.Location = new System.Drawing.Point(20, 196);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(123, 23);
             this.comboBox1.TabIndex = 7;
@@ -185,29 +196,29 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(282, 217);
+            this.dataGridView3.Location = new System.Drawing.Point(282, 284);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(355, 241);
+            this.dataGridView3.Size = new System.Drawing.Size(355, 174);
             this.dataGridView3.TabIndex = 8;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 24);
+            this.textBox1.Location = new System.Drawing.Point(83, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 23);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 53);
+            this.textBox2.Location = new System.Drawing.Point(83, 72);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(140, 23);
             this.textBox2.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(32, 82);
+            this.textBox3.Location = new System.Drawing.Point(32, 101);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(191, 23);
             this.textBox3.TabIndex = 11;
@@ -215,7 +226,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 27);
+            this.label1.Location = new System.Drawing.Point(32, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 12;
@@ -224,7 +235,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 56);
+            this.label3.Location = new System.Drawing.Point(32, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 13;
@@ -232,10 +243,53 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(32, 101);
+            this.textBox4.Location = new System.Drawing.Point(32, 120);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(191, 23);
             this.textBox4.TabIndex = 14;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(446, 208);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(191, 23);
+            this.textBox5.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(368, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "label2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(446, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 15);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(644, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(117, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 15);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "label6";
             // 
             // salesmanHomePage
             // 
@@ -278,5 +332,10 @@
         private TextBox textBox3;
         private TextBox textBox2;
         private TextBox textBox1;
+        private TextBox textBox5;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label2;
     }
 }
