@@ -14,8 +14,10 @@ namespace superShopManagementSystem.forms
     {
         salesmanHomePage_productEntry sl1 = new salesmanHomePage_productEntry();
         salesmanHomPage_customer sl2 = new salesmanHomPage_customer();
-        public salesmanHomePage()
+        homeUsers hmpg;
+        public salesmanHomePage(homeUsers homePage)
         {
+            this.hmpg = homePage;
             InitializeComponent();
             loadform(sl2);
         }
@@ -51,6 +53,12 @@ namespace superShopManagementSystem.forms
         private void button3_Click(object sender, EventArgs e)
         {
             loadform(sl1);
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            hmpg.Show();
+            this.Hide();
         }
     }
 }

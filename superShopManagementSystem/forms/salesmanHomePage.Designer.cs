@@ -119,6 +119,7 @@
             this.logout.TabIndex = 4;
             this.logout.Text = "LOGOUT";
             this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // pictureBox1
             // 
