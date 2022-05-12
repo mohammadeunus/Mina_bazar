@@ -74,9 +74,9 @@
             this.userId.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.userId.Location = new System.Drawing.Point(308, 282);
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(66, 17);
+            this.userId.Size = new System.Drawing.Size(48, 17);
             this.userId.TabIndex = 4;
-            this.userId.Text = "UserName";
+            this.userId.Text = "User Id";
             // 
             // userPass
             // 

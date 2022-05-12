@@ -21,30 +21,37 @@ namespace superShopManagementSystem.forms
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            Connection CN = new Connection();
-            if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+            try
             {
-                //title
-                label1.Text = "AdminPage: salesMan New Entry";
-                //querrySalesMan
-                sp_insert = "INSERT INTO salesman (ID, PASS) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "'); ";
-            }
-            else
-            {
-                //title
-                label1.Text = "AdminPage: inventoryManager New Entry";
-                //querry inventory_manager
-                sp_insert = "INSERT INTO inventory_login (ID, PASS) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "'); ";
-            }
-            CN.thisConnection.Open();
-            SqlCommand cmd = new SqlCommand(sp_insert, CN.thisConnection);
+                Connection CN = new Connection();
+                if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
+                {
+                    //title
+                    label1.Text = "AdminPage: salesMan New Entry";
+                    //querrySalesMan
+                    sp_insert = "INSERT INTO salesman (ID, PASS, NAME) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "', '" + textBoxName.Text + "'); ";
+                }
+                else
+                {
+                    //title
+                    label1.Text = "AdminPage: inventoryManager New Entry";
+                    //querry inventory_manager
+                    sp_insert = "INSERT INTO inventory_login (ID, PASS, NAME) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "', '" + textBoxName.Text + "'); ";
+                }
+                CN.thisConnection.Open();
+                SqlCommand cmd = new SqlCommand(sp_insert, CN.thisConnection);
 
-            int i = cmd.ExecuteNonQuery();
+                int i = cmd.ExecuteNonQuery();
 
-            CN.thisConnection.Close();
-            if (i > 0)
+                CN.thisConnection.Close();
+                if (i == 1)
+                {
+                    ERRORLABEL.Text = i + " Data Saved";
+                }
+            }
+            catch (Exception ex)
             {
-                ERRORLABEL.Text = i + " Data Saved";
+                ERRORLABEL.Text = "insert_sql_newId exception: "+ex.ToString();
             }
         }
 

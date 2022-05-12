@@ -35,6 +35,8 @@
             this.EntryIdManager = new System.Windows.Forms.TextBox();
             this.EntryPassBoxManager = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ERRORLABEL
@@ -42,7 +44,7 @@
             this.ERRORLABEL.AutoSize = true;
             this.ERRORLABEL.BackColor = System.Drawing.Color.IndianRed;
             this.ERRORLABEL.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.ERRORLABEL.Location = new System.Drawing.Point(163, 318);
+            this.ERRORLABEL.Location = new System.Drawing.Point(44, 317);
             this.ERRORLABEL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ERRORLABEL.Name = "ERRORLABEL";
             this.ERRORLABEL.Size = new System.Drawing.Size(0, 17);
@@ -51,7 +53,7 @@
             // createButton
             // 
             this.createButton.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.createButton.Location = new System.Drawing.Point(166, 249);
+            this.createButton.Location = new System.Drawing.Point(164, 275);
             this.createButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(282, 32);
@@ -64,7 +66,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(173, 196);
+            this.label3.Location = new System.Drawing.Point(172, 221);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
@@ -75,16 +77,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(175, 163);
+            this.label2.Location = new System.Drawing.Point(174, 194);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 17);
+            this.label2.Size = new System.Drawing.Size(19, 17);
             this.label2.TabIndex = 24;
-            this.label2.Text = "id";
+            this.label2.Text = "Id";
             // 
             // EntryIdManager
             // 
-            this.EntryIdManager.Location = new System.Drawing.Point(261, 159);
+            this.EntryIdManager.Location = new System.Drawing.Point(260, 190);
             this.EntryIdManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryIdManager.Name = "EntryIdManager";
             this.EntryIdManager.Size = new System.Drawing.Size(177, 23);
@@ -92,7 +94,7 @@
             // 
             // EntryPassBoxManager
             // 
-            this.EntryPassBoxManager.Location = new System.Drawing.Point(261, 194);
+            this.EntryPassBoxManager.Location = new System.Drawing.Point(260, 219);
             this.EntryPassBoxManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.EntryPassBoxManager.Name = "EntryPassBoxManager";
             this.EntryPassBoxManager.PasswordChar = 'x';
@@ -103,18 +105,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(164, 102);
+            this.label1.Location = new System.Drawing.Point(163, 108);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(292, 27);
             this.label1.TabIndex = 21;
             this.label1.Text = "AdminPage: Manager New Entry";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(172, 163);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Name";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(260, 161);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.PasswordChar = 'x';
+            this.textBoxName.Size = new System.Drawing.Size(177, 23);
+            this.textBoxName.TabIndex = 28;
+            // 
             // adminHomePage_newEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.ERRORLABEL);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.label3);
@@ -140,5 +164,7 @@
         private TextBox EntryIdManager;
         private TextBox EntryPassBoxManager;
         private Label label1;
+        private Label label4;
+        private TextBox textBoxName;
     }
 }
