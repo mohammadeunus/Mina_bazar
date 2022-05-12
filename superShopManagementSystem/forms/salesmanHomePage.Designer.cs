@@ -32,7 +32,7 @@
             this.mainPanelManagerPage = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.salername = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logout = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             // 
             this.mainPanelManagerPage.Controls.Add(this.button3);
             this.mainPanelManagerPage.Controls.Add(this.button1);
-            this.mainPanelManagerPage.Controls.Add(this.label5);
+            this.mainPanelManagerPage.Controls.Add(this.salername);
             this.mainPanelManagerPage.Controls.Add(this.label4);
             this.mainPanelManagerPage.Controls.Add(this.panel1);
             this.mainPanelManagerPage.Controls.Add(this.logout);
@@ -56,6 +56,7 @@
             this.mainPanelManagerPage.Name = "mainPanelManagerPage";
             this.mainPanelManagerPage.Size = new System.Drawing.Size(831, 488);
             this.mainPanelManagerPage.TabIndex = 9;
+            this.mainPanelManagerPage.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelManagerPage_Paint);
             // 
             // button3
             // 
@@ -81,14 +82,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label5
+            // salername
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 15);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "seller Name";
+            this.salername.AutoSize = true;
+            this.salername.Location = new System.Drawing.Point(10, 43);
+            this.salername.Name = "salername";
+            this.salername.Size = new System.Drawing.Size(69, 15);
+            this.salername.TabIndex = 7;
+            this.salername.Text = "seller Name";
+            this.salername.Click += new System.EventHandler(this.salername_Click);
             // 
             // label4
             // 
@@ -155,7 +157,7 @@
         private PictureBox pictureBox1;
         private Button logout;
         private Panel panel1;
-        private Label label5;
+        private Label salername;
         private Label label4;
         private Button button3;
         private Button button1;

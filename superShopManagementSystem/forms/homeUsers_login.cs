@@ -134,7 +134,9 @@ namespace superShopManagementSystem.forms
                     sda.Fill(dtable);
                     if (dtable.Rows.Count > 0)
                     {
-                        salesmanHomePage oform = new salesmanHomePage(hmp);
+
+                        string name = dtable.Rows[0]["name"].ToString();
+                        salesmanHomePage oform = new salesmanHomePage(hmp,name);
                         oform.Show();
                         userPassTextBox.Clear();
                         this.Hide();

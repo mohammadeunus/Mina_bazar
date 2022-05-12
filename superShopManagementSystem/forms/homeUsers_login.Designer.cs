@@ -102,7 +102,7 @@
             // 
             this.adminLoginInfo.AutoSize = true;
             this.adminLoginInfo.ForeColor = System.Drawing.Color.IndianRed;
-            this.adminLoginInfo.Location = new System.Drawing.Point(195, 388);
+            this.adminLoginInfo.Location = new System.Drawing.Point(174, 399);
             this.adminLoginInfo.Name = "adminLoginInfo";
             this.adminLoginInfo.Size = new System.Drawing.Size(10, 15);
             this.adminLoginInfo.TabIndex = 29;

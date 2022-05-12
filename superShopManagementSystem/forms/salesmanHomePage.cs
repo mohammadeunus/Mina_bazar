@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,13 @@ namespace superShopManagementSystem.forms
     {
         salesmanHomePage_productEntry sl1 = new salesmanHomePage_productEntry();
         salesmanHomPage_customer sl2 = new salesmanHomPage_customer();
-        homeUsers hmpg;
-        public salesmanHomePage(homeUsers homePage)
-        {
+        homeUsers hmpg; 
+        public salesmanHomePage(homeUsers homePage, string name)
+        { 
             this.hmpg = homePage;
             InitializeComponent();
             loadform(sl2);
+            salername.Text = name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +41,8 @@ namespace superShopManagementSystem.forms
             this.panel1.Tag = f;
             f.Show();
         }
+ 
+ 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -59,6 +63,16 @@ namespace superShopManagementSystem.forms
         {
             hmpg.Show();
             this.Hide();
+        }
+
+        private void salername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanelManagerPage_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
