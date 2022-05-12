@@ -21,6 +21,7 @@ namespace superShopManagementSystem.forms
         }
         void saleSummery(bool d,string querry)
         {
+            
             try
             {
                 Connection CN = new Connection();
@@ -53,6 +54,11 @@ namespace superShopManagementSystem.forms
         private void buttonAdd_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            saleSummery(false, "SELECT * FROM productlist");
         }
     }
 }

@@ -209,6 +209,7 @@
             this.buttonRefresh.TabIndex = 24;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonPrint
             // 
