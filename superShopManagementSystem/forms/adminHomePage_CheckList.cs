@@ -13,7 +13,7 @@ namespace superShopManagementSystem.forms
 { 
     public partial class adminHomePage_CheckList : Form
     {
-        string querry; 
+        string? querry; 
         public adminHomePage_CheckList()
         { 
             InitializeComponent();
@@ -25,15 +25,12 @@ namespace superShopManagementSystem.forms
             if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
             {
                 //querrySalesMan
-                querry = "SELECT * FROM salesman_login";
-                label1.Text = "AdminPage: salesMan's List";
-
+                querry = "SELECT * FROM salesman_login"; 
             }
             else
             {
                 //inventory_login
-                querry = "SELECT * FROM inventory_login";
-                label1.Text = "AdminPage: inventory Manager's List";
+                querry = "SELECT * FROM inventory_login"; 
             }
             SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
             DataTable ftable = new DataTable();

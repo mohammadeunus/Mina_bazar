@@ -25,16 +25,12 @@ namespace superShopManagementSystem.forms
             {
                 Connection CN = new Connection();
                 if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
-                {
-                    //title
-                    label1.Text = "AdminPage: salesMan New Entry";
+                { 
                     //querrySalesMan
                     sp_delete = "Delete from salesman where ID= '" + this.DeleteIdBoxManager.Text + "'";
                 }
                 else
-                {
-                    //title
-                    label1.Text = "AdminPage: inventoryManager New Entry";
+                { 
                     //querry inventory_manager
                     sp_delete = "Delete from inventory_login where ID= '" + this.DeleteIdBoxManager.Text + "'";
                 }

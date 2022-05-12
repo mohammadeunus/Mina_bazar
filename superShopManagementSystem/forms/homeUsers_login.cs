@@ -57,10 +57,14 @@ namespace superShopManagementSystem.forms
                 try
                 {
                     Connection CN = new Connection();
+                    //this query check whether the pass and id matches the data in server or not
                     querry = "SELECT * FROM admin_login WHERE id='" + userIdTextBox.Text + "' AND pass='" + userPassTextBox.Text + "'";
 
-                    SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
-
+                    /*The SqlDataAdapter, serves as a bridge between a DataSet and SQL Server for retrieving and saving data.
+                     *the following code was extracted from https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqldataadapter?view=dotnet-plat-ext-6.0
+                     */
+                    SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection); 
+                    
                     DataTable dtable = new DataTable();
                     sda.Fill(dtable);
                     if (dtable.Rows.Count > 0)
@@ -69,11 +73,10 @@ namespace superShopManagementSystem.forms
                         oform.Show();
                         userPassTextBox.Clear();
                         this.Hide();
-
                     }
                     else
                     {
-                        adminLoginInfo.Text = "Admin: username or password incorrect";
+                        //adminLoginInfo.Text = "Admin: username or password incorrect";
                         userPassTextBox.Clear();
                     }
                     //this.Close();

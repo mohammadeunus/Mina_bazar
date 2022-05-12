@@ -37,12 +37,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(200, 54);
+            this.label1.Location = new System.Drawing.Point(273, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 27);
+            this.label1.Size = new System.Drawing.Size(86, 27);
             this.label1.TabIndex = 5;
-            this.label1.Text = "AdminPage: Manager\'s List";
+            this.label1.Text = "User List";
             // 
             // dataGridView1
             // 

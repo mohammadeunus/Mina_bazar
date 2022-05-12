@@ -62,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(199, 196);
+            this.label2.Location = new System.Drawing.Point(202, 193);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
@@ -71,7 +71,7 @@
             // 
             // DeleteIdBoxManager
             // 
-            this.DeleteIdBoxManager.Location = new System.Drawing.Point(307, 193);
+            this.DeleteIdBoxManager.Location = new System.Drawing.Point(293, 193);
             this.DeleteIdBoxManager.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DeleteIdBoxManager.Name = "DeleteIdBoxManager";
             this.DeleteIdBoxManager.Size = new System.Drawing.Size(191, 23);
@@ -81,12 +81,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(197, 107);
+            this.label1.Location = new System.Drawing.Point(279, 121);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 27);
+            this.label1.Size = new System.Drawing.Size(130, 27);
             this.label1.TabIndex = 27;
-            this.label1.Text = "AdminPage: Delete a manager ";
+            this.label1.Text = "Delete a entry";
             // 
             // adminHomePage_deleteEntry
             // 
