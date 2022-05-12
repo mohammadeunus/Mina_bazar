@@ -38,13 +38,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ERRORLABEL = new System.Windows.Forms.Label();
+            this.textBoxUnitPrice = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // refreshButton
             // 
             this.refreshButton.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.refreshButton.Location = new System.Drawing.Point(536, 406);
+            this.refreshButton.Location = new System.Drawing.Point(551, 406);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(93, 31);
@@ -56,16 +58,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(367, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(329, 29);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(262, 371);
+            this.dataGridView1.Size = new System.Drawing.Size(315, 371);
             this.dataGridView1.TabIndex = 9;
             // 
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonAdd.Location = new System.Drawing.Point(50, 210);
+            this.buttonAdd.Location = new System.Drawing.Point(33, 226);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(85, 37);
@@ -77,7 +79,7 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonDelete.Location = new System.Drawing.Point(236, 210);
+            this.buttonDelete.Location = new System.Drawing.Point(219, 226);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(85, 37);
@@ -88,7 +90,7 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Segoe Script", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonUpdate.Location = new System.Drawing.Point(143, 210);
+            this.buttonUpdate.Location = new System.Drawing.Point(126, 226);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(85, 37);
@@ -98,14 +100,14 @@
             // 
             // textBoxProductname
             // 
-            this.textBoxProductname.Location = new System.Drawing.Point(50, 162);
+            this.textBoxProductname.Location = new System.Drawing.Point(33, 61);
             this.textBoxProductname.Name = "textBoxProductname";
-            this.textBoxProductname.Size = new System.Drawing.Size(120, 23);
+            this.textBoxProductname.Size = new System.Drawing.Size(133, 23);
             this.textBoxProductname.TabIndex = 15;
             // 
             // textBoxProductquantity
             // 
-            this.textBoxProductquantity.Location = new System.Drawing.Point(188, 162);
+            this.textBoxProductquantity.Location = new System.Drawing.Point(33, 120);
             this.textBoxProductquantity.Name = "textBoxProductquantity";
             this.textBoxProductquantity.Size = new System.Drawing.Size(133, 23);
             this.textBoxProductquantity.TabIndex = 16;
@@ -113,20 +115,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(193, 109);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(33, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 21);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Product Quantity";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(50, 109);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(33, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 17;
             this.label2.Text = "Product Name";
             // 
@@ -140,6 +142,23 @@
             this.ERRORLABEL.Size = new System.Drawing.Size(0, 15);
             this.ERRORLABEL.TabIndex = 18;
             // 
+            // textBoxUnitPrice
+            // 
+            this.textBoxUnitPrice.Location = new System.Drawing.Point(33, 181);
+            this.textBoxUnitPrice.Name = "textBoxUnitPrice";
+            this.textBoxUnitPrice.Size = new System.Drawing.Size(133, 23);
+            this.textBoxUnitPrice.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(33, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Unit Price";
+            // 
             // inventoryHomePage_showStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -147,7 +166,9 @@
             this.ClientSize = new System.Drawing.Size(682, 450);
             this.Controls.Add(this.ERRORLABEL);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxUnitPrice);
             this.Controls.Add(this.textBoxProductquantity);
             this.Controls.Add(this.textBoxProductname);
             this.Controls.Add(this.buttonUpdate);
@@ -158,6 +179,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "inventoryHomePage_showStock";
             this.Text = "inventoryHomePage_showStock";
+            this.Load += new System.EventHandler(this.inventoryHomePage_showStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +198,7 @@
         private Label label1;
         private Label label2;
         private Label ERRORLABEL;
+        private TextBox textBoxUnitPrice;
+        private Label label3;
     }
 }

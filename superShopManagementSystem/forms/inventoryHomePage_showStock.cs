@@ -53,7 +53,7 @@ namespace superShopManagementSystem.forms
             {
                 Connection CN = new Connection();
                 //querrySalesMan
-                sp_insert = "INSERT INTO productlist (productname, prodqty) VALUES('" + textBoxProductname.Text + "', '" + textBoxProductquantity.Text + "'); ";
+                sp_insert = "INSERT INTO productlist (productname, prodqty, unitprice) VALUES('" + textBoxProductname.Text + "', '" + textBoxProductquantity.Text + "', '" + textBoxUnitPrice.Text + "'); ";
 
                 CN.thisConnection.Open();
                 SqlCommand cmd = new SqlCommand(sp_insert, CN.thisConnection);
@@ -71,6 +71,11 @@ namespace superShopManagementSystem.forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void inventoryHomePage_showStock_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

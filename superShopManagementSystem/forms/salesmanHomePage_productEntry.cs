@@ -16,26 +16,18 @@ namespace superShopManagementSystem.forms
         public salesmanHomePage_productEntry()
         {
             InitializeComponent();
-            saleSummery(true,"SELECT customerBillid as [Bill id],sellerName as [Seller Name], customerName as [Customer name], billdate as [Date], totalbill as [total]  FROM sellRecord");
-            saleSummery(false, "SELECT * FROM productlist");
+            saleSummery("SELECT * FROM productlist");
         }
-        void saleSummery(bool d,string querry)
+        void saleSummery(string querry)
         {
-            
+            Date.Text = DateTime.Now.ToString();
             try
             {
                 Connection CN = new Connection();
                 SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
                 DataTable ftable = new DataTable();
                 sda.Fill(ftable);
-                if (d == false)
-                {
-                    dataGridView2.DataSource = ftable;
-                }
-                else
-                {
-                    dataGridView3.DataSource = ftable;
-                }
+                dataGridView2.DataSource = ftable;
                 
                 CN.thisConnection.Close();
             }
@@ -58,7 +50,17 @@ namespace superShopManagementSystem.forms
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            saleSummery(false, "SELECT * FROM productlist");
+            saleSummery("SELECT * FROM productlist");
+        }
+
+        private void salesmanHomePage_productEntry_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

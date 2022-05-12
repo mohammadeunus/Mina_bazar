@@ -21,6 +21,7 @@ namespace superShopManagementSystem.forms
         
         void saleSummery()
         {
+            Date.Text = DateTime.Now.ToString();
             string querry = "SELECT customerBillid as [Bill id],sellerName as [Seller Name], customerName as [Customer name], billdate as [Date], totalbill as [total]  FROM sellRecord";
             try
             {

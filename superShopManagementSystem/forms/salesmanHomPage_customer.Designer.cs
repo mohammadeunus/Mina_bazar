@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonAddcusotomer = new System.Windows.Forms.Button();
+            this.Date = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,12 +85,22 @@
             this.buttonAddcusotomer.UseVisualStyleBackColor = false;
             this.buttonAddcusotomer.Click += new System.EventHandler(this.buttonAddcusotomer_Click);
             // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(514, 21);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(30, 15);
+            this.Date.TabIndex = 43;
+            this.Date.Text = "date";
+            // 
             // salesmanHomPage_customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(702, 441);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonAddcusotomer);
@@ -111,5 +122,6 @@
         private Label label1;
         private TextBox textBox1;
         private Button buttonAddcusotomer;
+        private Label Date;
     }
 }
