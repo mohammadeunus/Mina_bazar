@@ -25,7 +25,7 @@ namespace superShopManagementSystem.forms
             if (radioButtonclassBase.optionRadio == ENUMsalesManORmanager.salesMan)
             {
                 //querrySalesMan
-                querry = "SELECT * FROM salesman";
+                querry = "SELECT * FROM salesman_login";
                 label1.Text = "AdminPage: salesMan's List";
 
             }
