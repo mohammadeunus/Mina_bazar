@@ -40,7 +40,6 @@ namespace superShopManagementSystem.forms
             this.mainPanelAdmin.Controls.Add(f);
             this.mainPanelAdmin.Tag = f;
             f.Show();
-
         }
         public void  radioCheck()
         {

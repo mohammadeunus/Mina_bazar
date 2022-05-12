@@ -67,6 +67,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "product  entry";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -78,6 +79,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "customers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label5
             // 
