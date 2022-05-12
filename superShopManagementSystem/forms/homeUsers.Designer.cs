@@ -49,7 +49,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Font = new System.Drawing.Font("Segoe Print", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(192, 282);
+            this.label5.Location = new System.Drawing.Point(181, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 14);
             this.label5.TabIndex = 25;
@@ -60,7 +60,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(330, 277);
+            this.label4.Location = new System.Drawing.Point(318, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 24;
@@ -72,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(92, 278);
+            this.label3.Location = new System.Drawing.Point(78, 278);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 19);
             this.label3.TabIndex = 23;
@@ -82,7 +82,7 @@
             // 
             this.salesManPictureBox.BackColor = System.Drawing.Color.White;
             this.salesManPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("salesManPictureBox.Image")));
-            this.salesManPictureBox.Location = new System.Drawing.Point(306, 119);
+            this.salesManPictureBox.Location = new System.Drawing.Point(294, 130);
             this.salesManPictureBox.Name = "salesManPictureBox";
             this.salesManPictureBox.Size = new System.Drawing.Size(120, 196);
             this.salesManPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,7 +94,7 @@
             // 
             this.managerPictureBox.BackColor = System.Drawing.Color.White;
             this.managerPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("managerPictureBox.Image")));
-            this.managerPictureBox.Location = new System.Drawing.Point(172, 125);
+            this.managerPictureBox.Location = new System.Drawing.Point(160, 134);
             this.managerPictureBox.Name = "managerPictureBox";
             this.managerPictureBox.Size = new System.Drawing.Size(128, 190);
             this.managerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             // 
             this.adminPictureBox.BackColor = System.Drawing.Color.White;
             this.adminPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("adminPictureBox.Image")));
-            this.adminPictureBox.Location = new System.Drawing.Point(58, 125);
+            this.adminPictureBox.Location = new System.Drawing.Point(46, 134);
             this.adminPictureBox.Name = "adminPictureBox";
             this.adminPictureBox.Size = new System.Drawing.Size(119, 190);
             this.adminPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

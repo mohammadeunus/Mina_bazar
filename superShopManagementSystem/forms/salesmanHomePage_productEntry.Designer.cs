@@ -79,7 +79,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 126);
+            this.label3.Location = new System.Drawing.Point(286, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 15);
             this.label3.TabIndex = 33;
@@ -88,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(350, 187);
+            this.label1.Location = new System.Drawing.Point(312, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 15);
             this.label1.TabIndex = 32;
@@ -96,7 +96,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(420, 152);
+            this.textBox1.Location = new System.Drawing.Point(382, 152);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 23);
             this.textBox1.TabIndex = 29;
@@ -123,7 +123,7 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonPrint.BackColor = System.Drawing.Color.Silver;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.buttonPrint.Location = new System.Drawing.Point(663, 241);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -136,12 +136,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(243, 66);
+            this.button2.Location = new System.Drawing.Point(545, 64);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 95);
+            this.button2.Size = new System.Drawing.Size(68, 111);
             this.button2.TabIndex = 22;
             this.button2.Text = "Add product";
             this.button2.UseVisualStyleBackColor = false;
@@ -149,14 +149,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(420, 94);
+            this.textBox3.Location = new System.Drawing.Point(382, 94);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(140, 23);
             this.textBox3.TabIndex = 29;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(420, 123);
+            this.textBox4.Location = new System.Drawing.Point(382, 123);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(140, 23);
             this.textBox4.TabIndex = 30;
@@ -164,7 +164,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(370, 97);
+            this.label4.Location = new System.Drawing.Point(332, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 32;
@@ -173,15 +173,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(352, 152);
+            this.label5.Location = new System.Drawing.Point(314, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
+            this.label5.Size = new System.Drawing.Size(59, 15);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Quantitiy :";
+            this.label5.Text = "Quantity :";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(420, 65);
+            this.textBox6.Location = new System.Drawing.Point(382, 65);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(140, 23);
             this.textBox6.TabIndex = 29;
@@ -189,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(345, 68);
+            this.label6.Location = new System.Drawing.Point(307, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 32;
@@ -198,7 +198,7 @@
             // totalPrice
             // 
             this.totalPrice.AutoSize = true;
-            this.totalPrice.Location = new System.Drawing.Point(425, 187);
+            this.totalPrice.Location = new System.Drawing.Point(387, 187);
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.Size = new System.Drawing.Size(40, 15);
             this.totalPrice.TabIndex = 41;
@@ -207,7 +207,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(483, 187);
+            this.label8.Location = new System.Drawing.Point(445, 187);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 15);
             this.label8.TabIndex = 41;
