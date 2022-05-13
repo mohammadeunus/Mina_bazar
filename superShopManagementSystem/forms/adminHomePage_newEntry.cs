@@ -29,7 +29,7 @@ namespace superShopManagementSystem.forms
                     //title
                     label1.Text = "AdminPage: salesMan New Entry";
                     //querrySalesMan
-                    sp_insert = "INSERT INTO salesman (ID, PASS, NAME) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "', '" + textBoxName.Text + "'); ";
+                    sp_insert = "INSERT INTO salesman_login (ID, PASS, NAME) VALUES('" + EntryIdManager.Text + "', '" + EntryPassBoxManager.Text + "', '" + textBoxName.Text + "'); ";
                 }
                 else
                 {
