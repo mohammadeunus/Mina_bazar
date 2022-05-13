@@ -27,6 +27,7 @@ Admin Interface
 Duty of inventory manager
 
 <br>
+
 ![](garbage/ui2.gif)
 
 <br>
@@ -43,8 +44,10 @@ Duty of inventory manager
 Duty of salesMan
 
 <br>
+
 ![](garbage/ui3.gif)
 
+<br>
 <br>
 
 -Make bill : 
