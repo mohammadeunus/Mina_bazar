@@ -19,12 +19,18 @@ Duty of Admin
 Admin Interface
 <br>
 
-![](garbage/admin_ui.gif)
+![](garbage/UI1.gif)
 
 <br>
 <br>
+
 Duty of inventory manager
 
+<br>
+![](garbage/ui2.gif)
+
+<br>
+<br>
 -Add product 
 -Delete product 
 -Update product
@@ -35,6 +41,11 @@ Duty of inventory manager
 <br>
 <br>
 Duty of salesMan
+
+<br>
+![](garbage/ui3.gif)
+
+<br>
 
 -Make bill : 
 -meanwhile update the inventory and  
