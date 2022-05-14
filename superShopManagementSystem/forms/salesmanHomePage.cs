@@ -65,6 +65,11 @@ namespace superShopManagementSystem.forms
             this.Hide();
         }
 
+        private void buttonEntry_Click(object sender, EventArgs e)
+        {
+            loadform(sl1);
+        }
+
         private void salername_Click(object sender, EventArgs e)
         {
 
@@ -74,5 +79,6 @@ namespace superShopManagementSystem.forms
         {
 
         }
+
     }
 }

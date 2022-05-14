@@ -13,6 +13,9 @@ namespace superShopManagementSystem.forms
 {
     public partial class salesmanHomPage_customer : Form
     {
+        string? customerName,bk_update;
+
+        Connection CN = new Connection();
         public salesmanHomPage_customer()
         {
             InitializeComponent();
@@ -41,7 +44,32 @@ namespace superShopManagementSystem.forms
         
         private void buttonAddcusotomer_Click(object sender, EventArgs e)
         {
+            //customerName =textBoxAddcusotomer.Text;
+            //userNameBox
 
+        }
+
+        private void textBoxAddcusotomer_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bk_update = "select * from sellrecord where customername = '" + textBoxAddcusotomer.Text + "' ";
+                CN.thisConnection.Open();
+                SqlCommand cmcd = new SqlCommand(bk_update, CN.thisConnection);
+
+                int i = cmcd.ExecuteNonQuery();
+
+                if (i !=1)
+                {
+                    errorLabel.Text = "possible new customer";
+                }
+                CN.thisConnection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -13,6 +13,9 @@ namespace superShopManagementSystem.forms
 {
     public partial class salesmanHomePage_productEntry : Form
     {
+        string? bk_update;
+
+        Connection CN = new Connection();
         public salesmanHomePage_productEntry()
         {
             InitializeComponent();
@@ -23,7 +26,6 @@ namespace superShopManagementSystem.forms
             Date.Text = DateTime.Now.ToString();
             try
             {
-                Connection CN = new Connection();
                 SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
                 DataTable ftable = new DataTable();
                 sda.Fill(ftable);
@@ -59,6 +61,36 @@ namespace superShopManagementSystem.forms
         }
 
         private void buttonPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxProductName_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bk_update = "SELECT unitprice FROM productlist where productname= '" + textBoxProductName.Text + "'";
+                CN.thisConnection.Open();
+
+                SqlCommand sdaa = new SqlCommand(bk_update, CN.thisConnection);
+
+                SqlDataReader da = sdaa.ExecuteReader();
+
+                while (da.Read())
+                {
+                    unitPrice.Text = da.GetValue(0).ToString(); 
+                }
+
+                CN.thisConnection.Close(); 
+            }
+
+            catch (Exception ex)
+            {
+                //
+            }
+        }
+
+        private void buttonAddProduct_Click(object sender, EventArgs e)
         {
 
         }

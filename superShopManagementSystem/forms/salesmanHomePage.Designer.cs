@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(salesmanHomePage));
             this.mainPanelManagerPage = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonEntry = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.salername = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             // 
             // mainPanelManagerPage
             // 
-            this.mainPanelManagerPage.Controls.Add(this.button3);
+            this.mainPanelManagerPage.Controls.Add(this.buttonEntry);
             this.mainPanelManagerPage.Controls.Add(this.button1);
             this.mainPanelManagerPage.Controls.Add(this.salername);
             this.mainPanelManagerPage.Controls.Add(this.label4);
@@ -58,17 +58,17 @@
             this.mainPanelManagerPage.TabIndex = 9;
             this.mainPanelManagerPage.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelManagerPage_Paint);
             // 
-            // button3
+            // buttonEntry
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(6, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 67);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "product  entry";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonEntry.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonEntry.Location = new System.Drawing.Point(6, 178);
+            this.buttonEntry.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonEntry.Name = "buttonEntry";
+            this.buttonEntry.Size = new System.Drawing.Size(72, 66);
+            this.buttonEntry.TabIndex = 21;
+            this.buttonEntry.Text = "Entry product";
+            this.buttonEntry.UseVisualStyleBackColor = true;
+            this.buttonEntry.Click += new System.EventHandler(this.buttonEntry_Click);
             // 
             // button1
             // 
@@ -159,7 +159,7 @@
         private Panel panel1;
         private Label salername;
         private Label label4;
-        private Button button3;
         private Button button1;
+        private Button buttonEntry;
     }
 }

@@ -37,16 +37,20 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonPrint = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAddProduct = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.totalPrice = new System.Windows.Forms.Label();
+            this.CustomerName = new System.Windows.Forms.Label();
+            this.unitPrice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
+            this.textBoxCustomerName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -134,18 +138,18 @@
             this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
-            // button2
+            // buttonAddProduct
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(545, 64);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 111);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Add product";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAddProduct.BackColor = System.Drawing.Color.Silver;
+            this.buttonAddProduct.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonAddProduct.Location = new System.Drawing.Point(545, 64);
+            this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonAddProduct.Name = "buttonAddProduct";
+            this.buttonAddProduct.Size = new System.Drawing.Size(68, 111);
+            this.buttonAddProduct.TabIndex = 22;
+            this.buttonAddProduct.Text = "Add product";
+            this.buttonAddProduct.UseVisualStyleBackColor = false;
+            this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
             // 
             // textBox3
             // 
@@ -154,12 +158,13 @@
             this.textBox3.Size = new System.Drawing.Size(140, 23);
             this.textBox3.TabIndex = 29;
             // 
-            // textBox4
+            // textBoxProductName
             // 
-            this.textBox4.Location = new System.Drawing.Point(382, 123);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 23);
-            this.textBox4.TabIndex = 30;
+            this.textBoxProductName.Location = new System.Drawing.Point(382, 123);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new System.Drawing.Size(140, 23);
+            this.textBoxProductName.TabIndex = 30;
+            this.textBoxProductName.TextChanged += new System.EventHandler(this.textBoxProductName_TextChanged);
             // 
             // label4
             // 
@@ -179,30 +184,23 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "Quantity :";
             // 
-            // textBox6
+            // CustomerName
             // 
-            this.textBox6.Location = new System.Drawing.Point(382, 65);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 23);
-            this.textBox6.TabIndex = 29;
+            this.CustomerName.AutoSize = true;
+            this.CustomerName.Location = new System.Drawing.Point(276, 65);
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Size = new System.Drawing.Size(97, 15);
+            this.CustomerName.TabIndex = 32;
+            this.CustomerName.Text = "CustomerName :";
             // 
-            // label6
+            // unitPrice
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(307, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 15);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "User name :";
-            // 
-            // totalPrice
-            // 
-            this.totalPrice.AutoSize = true;
-            this.totalPrice.Location = new System.Drawing.Point(387, 187);
-            this.totalPrice.Name = "totalPrice";
-            this.totalPrice.Size = new System.Drawing.Size(40, 15);
-            this.totalPrice.TabIndex = 41;
-            this.totalPrice.Text = ".. .. .. ..";
+            this.unitPrice.AutoSize = true;
+            this.unitPrice.Location = new System.Drawing.Point(387, 187);
+            this.unitPrice.Name = "unitPrice";
+            this.unitPrice.Size = new System.Drawing.Size(40, 15);
+            this.unitPrice.TabIndex = 41;
+            this.unitPrice.Text = ".. .. .. ..";
             // 
             // label8
             // 
@@ -222,6 +220,49 @@
             this.Date.TabIndex = 42;
             this.Date.Text = "date";
             // 
+            // textBoxCustomerName
+            // 
+            this.textBoxCustomerName.Location = new System.Drawing.Point(382, 65);
+            this.textBoxCustomerName.Name = "textBoxCustomerName";
+            this.textBoxCustomerName.Size = new System.Drawing.Size(140, 23);
+            this.textBoxCustomerName.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(640, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 15);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "..  ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(640, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 15);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "..  ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(640, 123);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 15);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "..  ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(640, 152);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 15);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "..  ";
+            // 
             // salesmanHomePage_productEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -230,23 +271,27 @@
             this.ClientSize = new System.Drawing.Size(730, 450);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.totalPrice);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.unitPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.totalBill);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CustomerName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.textBoxCustomerName);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonPrint);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAddProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "salesmanHomePage_productEntry";
             this.Text = "salesmanHomePage_productEntry";
@@ -269,15 +314,19 @@
         private DataGridView dataGridView2;
         private DataGridView dataGridView1;
         private Button buttonPrint;
-        private Button button2;
+        private Button buttonAddProduct;
         private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox textBoxProductName;
         private Label label4;
         private Label label5;
-        private TextBox textBox6;
-        private Label label6;
-        private Label totalPrice;
+        private Label CustomerName;
+        private Label unitPrice;
         private Label label8;
         private Label Date;
+        private TextBox textBoxCustomerName;
+        private Label label6;
+        private Label label7;
+        private Label label9;
+        private Label label10;
     }
 }
