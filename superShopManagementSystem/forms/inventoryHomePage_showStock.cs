@@ -13,6 +13,8 @@ namespace superShopManagementSystem.forms
 {
     public partial class inventoryHomePage_showStock : Form
     {
+        private string? bk_update;
+        Connection CN = new Connection();
         public inventoryHomePage_showStock()
         {
             InitializeComponent();
@@ -76,6 +78,33 @@ namespace superShopManagementSystem.forms
         private void inventoryHomePage_showStock_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxProductname_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bk_update = "SELECT prodqty, unitprice FROM productlist where productname= '" + textBoxProductname.Text + "'";
+                CN.thisConnection.Open();
+
+                SqlCommand sdaa = new SqlCommand(bk_update, CN.thisConnection);
+
+                SqlDataReader da = sdaa.ExecuteReader();
+                 
+                while (da.Read())
+                {
+                    textBoxProductquantity.Text = da.GetValue(0).ToString();
+                    textBoxUnitPrice.Text = da.GetValue(1).ToString();
+                }
+
+                CN.thisConnection.Close();
+            }
+
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

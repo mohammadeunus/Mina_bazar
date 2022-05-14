@@ -28,6 +28,7 @@ namespace superShopManagementSystem.forms
         {
 
         }
+
         public void loadform(object Form)
         {
             if (this.panel1.Controls.Count > 0)
@@ -41,7 +42,6 @@ namespace superShopManagementSystem.forms
             this.panel1.Tag = f;
             f.Show();
         }
- 
  
 
         private void panel1_Paint(object sender, PaintEventArgs e)

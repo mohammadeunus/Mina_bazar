@@ -104,6 +104,7 @@
             this.textBoxProductname.Name = "textBoxProductname";
             this.textBoxProductname.Size = new System.Drawing.Size(133, 23);
             this.textBoxProductname.TabIndex = 15;
+            this.textBoxProductname.TextChanged += new System.EventHandler(this.textBoxProductname_TextChanged);
             // 
             // textBoxProductquantity
             // 
