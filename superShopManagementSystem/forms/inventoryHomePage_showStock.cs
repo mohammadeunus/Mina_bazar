@@ -25,7 +25,6 @@ namespace superShopManagementSystem.forms
 
             try
             {
-                Connection CN = new Connection();
                 SqlDataAdapter sda = new SqlDataAdapter(querry, CN.thisConnection);
                 DataTable ftable = new DataTable();
                 sda.Fill(ftable);
@@ -53,7 +52,6 @@ namespace superShopManagementSystem.forms
             string sp_insert;
             try
             {
-                Connection CN = new Connection();
                 //querrySalesMan
                 sp_insert = "INSERT INTO productlist (productname, prodqty, unitprice) VALUES('" + textBoxProductname.Text + "', '" + textBoxProductquantity.Text + "', '" + textBoxUnitPrice.Text + "'); ";
 
@@ -65,7 +63,7 @@ namespace superShopManagementSystem.forms
                 CN.thisConnection.Close();
                 if (i == 1)
                 {
-                    ERRORLABEL.Text = i + " Data Saved";
+                    ERRORLABEL.Text = textBoxProductname.Text + " Data added";
                     saleSummery("SELECT * FROM productlist");
                 }
             }
@@ -98,6 +96,9 @@ namespace superShopManagementSystem.forms
                 }
 
                 CN.thisConnection.Close();
+                saleSummery("SELECT * FROM productlist");
+
+
             }
 
             catch (Exception ex)
@@ -105,6 +106,58 @@ namespace superShopManagementSystem.forms
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bk_update = "UPDATE productlist SET productname = '" + textBoxProductname.Text + "' , prodqty = '" + textBoxProductquantity.Text + "', unitprice = '" + textBoxUnitPrice.Text + "' where productname = '" + textBoxProductname.Text + "' ";
+                CN.thisConnection.Open();
+                SqlCommand cmcd = new SqlCommand(bk_update, CN.thisConnection);
+
+                cmcd.ExecuteNonQuery();
+
+                CN.thisConnection.Close();
+                ERRORLABEL.Text = textBoxProductname.Text + " Data updated";
+
+                saleSummery("SELECT * FROM productlist");
+
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sp_delete = "Delete from productlist where productname= '" + this.textBoxProductname.Text + "'";
+                CN.thisConnection.Open();
+                SqlCommand cmd = new SqlCommand(sp_delete, CN.thisConnection);
+
+                int i = cmd.ExecuteNonQuery();
+
+                CN.thisConnection.Close();
+                if (i > 0)
+                {
+                    ERRORLABEL.Text = textBoxProductname.Text + " is deleted successfully";
+                }
+                else
+                {
+                    ERRORLABEL.Text = textBoxProductname.Text + " is not found in database.";
+                }
+
+                saleSummery("SELECT * FROM productlist");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
