@@ -275,6 +275,7 @@
             this.buttonClear.TabIndex = 23;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // salesmanHomePage_productEntry
             // 

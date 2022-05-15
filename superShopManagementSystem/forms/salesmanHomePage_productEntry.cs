@@ -200,7 +200,19 @@ namespace superShopManagementSystem.forms
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-             
+            if (custTable.Rows.Count > 0)
+            {
+                MessageBox.Show("dataTable is not empty");
+            }
+            else
+            {
+                MessageBox.Show("dataTable is empty");
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            custTable.Clear();
         }
     }
 }
