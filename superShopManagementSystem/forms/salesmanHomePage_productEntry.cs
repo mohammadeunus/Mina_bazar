@@ -96,14 +96,14 @@ namespace superShopManagementSystem.forms
             //check product available in list or not
             try
             {
-                bk_update = "SELECT unitprice FROM productlist where productname= '" + textBoxProductName.Text + "'";
+                bk_update = "SELECT * FROM productlist where productname= '" + textBoxProductName.Text + "'";
                 CN.thisConnection.Open();
                 SqlCommand cmd = new SqlCommand(bk_update, CN.thisConnection);
 
                 i = cmd.ExecuteNonQuery();
 
                 CN.thisConnection.Close();
-                if (i != 1)
+                if (i > 0)
                 {
                     label6.Text = textBoxProductName.Text + " is not available in the inventory";
                 }
@@ -137,8 +137,8 @@ namespace superShopManagementSystem.forms
                 // Create billid column
                 dtColumn = new DataColumn();
                 dtColumn.DataType = typeof(Int32);
-                dtColumn.ColumnName = "billid ";
-                dtColumn.Caption = "billid ";
+                dtColumn.ColumnName = "billid";
+                dtColumn.Caption = "billid";
                 dtColumn.ReadOnly = false;
                 dtColumn.Unique = false;
                 // Add column to the DataColumnCollection.
@@ -169,8 +169,8 @@ namespace superShopManagementSystem.forms
                 myDataRow["CustomerName"] = textBoxCustomerName.Text;
                 myDataRow["billid"] = textBoxBillid.Text;
                 myDataRow["productname"] = textBoxProductName.Text;
-                myDataRow["prodqty"] = textBoxQuantity.Text;
-
+                myDataRow["prodqty"] = textBoxQuantity.Text; 
+                custTable.Rows.Add(myDataRow);
 
                 return custTable;
             }
