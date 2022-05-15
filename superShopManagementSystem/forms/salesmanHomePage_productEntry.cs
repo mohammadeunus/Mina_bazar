@@ -22,6 +22,8 @@ namespace superShopManagementSystem.forms
 
 
         Connection CN = new Connection();
+        private int prc;
+
         public salesmanHomePage_productEntry()
         {
             InitializeComponent();
@@ -66,6 +68,16 @@ namespace superShopManagementSystem.forms
             dtColumn.DataType = typeof(Int32);
             dtColumn.ColumnName = "prodqty";
             dtColumn.Caption = "prodqty";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = false;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+
+            // Create price column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(Int32);
+            dtColumn.ColumnName = "price";
+            dtColumn.Caption = "price";
             dtColumn.ReadOnly = false;
             dtColumn.Unique = false;
             // Add column to the DataColumnCollection.
@@ -124,7 +136,9 @@ namespace superShopManagementSystem.forms
 
                 while (da.Read())
                 {
-                    unitPrice.Text = da.GetValue(0).ToString(); 
+                    unitPrice.Text = da.GetValue(0).ToString();
+
+                    prc = (int)da.GetValue(0);
                 }
 
                 CN.thisConnection.Close(); 
@@ -137,9 +151,7 @@ namespace superShopManagementSystem.forms
         }
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
-        {
-
-            label6.Text = "asdfasdfasd";
+        { 
             //check product available in list or not
             try
             {
@@ -149,7 +161,7 @@ namespace superShopManagementSystem.forms
                 SqlCommand sdaa = new SqlCommand(bk_update, CN.thisConnection);
 
                 SqlDataReader da = sdaa.ExecuteReader();
-                 
+
                 if (da.HasRows)
                 { 
                     CN.thisConnection.Close();
@@ -174,7 +186,8 @@ namespace superShopManagementSystem.forms
                 myDataRow["CustomerName"] = textBoxCustomerName.Text;
                 myDataRow["billid"] = textBoxBillid.Text;
                 myDataRow["productname"] = textBoxProductName.Text;
-                myDataRow["prodqty"] = textBoxQuantity.Text; 
+                myDataRow["prodqty"] = textBoxQuantity.Text;
+                myDataRow["price"] = (int)myDataRow["prodqty"]*prc ;
                 custTable.Rows.Add(myDataRow);
 
                 return custTable;
