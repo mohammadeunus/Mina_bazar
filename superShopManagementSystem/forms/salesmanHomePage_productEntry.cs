@@ -82,6 +82,7 @@ namespace superShopManagementSystem.forms
             dtColumn.Unique = false;
             // Add column to the DataColumnCollection.
             custTable.Columns.Add(dtColumn);
+ 
         }
 
         void saleSummery(string querry)
@@ -190,6 +191,8 @@ namespace superShopManagementSystem.forms
                 myDataRow["price"] = (int)myDataRow["prodqty"]*prc ;
                 custTable.Rows.Add(myDataRow);
 
+                textBoxTotalBill.Text = (custTable.Compute("SUM(Price)", string.Empty)).ToString();
+
                 return custTable;
             }
 
@@ -197,7 +200,7 @@ namespace superShopManagementSystem.forms
 
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-
+             
         }
     }
 }

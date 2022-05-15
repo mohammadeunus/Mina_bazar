@@ -30,7 +30,7 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.totalBill = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxTotalBill = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
@@ -74,12 +74,12 @@
             this.totalBill.TabIndex = 36;
             this.totalBill.Text = "Total Bill :";
             // 
-            // textBox5
+            // textBoxTotalBill
             // 
-            this.textBox5.Location = new System.Drawing.Point(444, 406);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 23);
-            this.textBox5.TabIndex = 35;
+            this.textBoxTotalBill.Location = new System.Drawing.Point(444, 406);
+            this.textBoxTotalBill.Name = "textBoxTotalBill";
+            this.textBoxTotalBill.Size = new System.Drawing.Size(136, 23);
+            this.textBoxTotalBill.TabIndex = 35;
             // 
             // label3
             // 
@@ -291,7 +291,7 @@
             this.Controls.Add(this.unitPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.totalBill);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxTotalBill);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CustomerName);
@@ -321,7 +321,7 @@
 
         private Label label2;
         private Label totalBill;
-        private TextBox textBox5;
+        private TextBox textBoxTotalBill;
         private Label label3;
         private Label label1;
         private TextBox textBoxQuantity;
