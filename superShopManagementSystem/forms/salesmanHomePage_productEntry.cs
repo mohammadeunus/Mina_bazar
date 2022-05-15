@@ -19,7 +19,7 @@ namespace superShopManagementSystem.forms
         DataTable custTable = new DataTable();
         DataColumn? dtColumn;
         DataRow? myDataRow;
-
+        salesmanHomePage_print shp;
 
         Connection CN = new Connection();
         private int prc;
@@ -202,7 +202,8 @@ namespace superShopManagementSystem.forms
         {
             if (custTable.Rows.Count > 0)
             {
-                MessageBox.Show("dataTable is not empty");
+                shp = new salesmanHomePage_print();
+                shp.Show();
             }
             else
             {
