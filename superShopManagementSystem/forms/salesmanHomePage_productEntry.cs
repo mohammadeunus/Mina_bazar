@@ -192,6 +192,7 @@ namespace superShopManagementSystem.forms
                 custTable.Rows.Add(myDataRow);
 
                 textBoxTotalBill.Text = (custTable.Compute("SUM(Price)", string.Empty)).ToString();
+                textBoxTotalItem.Text = (custTable.Compute("SUM(prodqty)", string.Empty)).ToString();
 
                 return custTable;
             }
@@ -214,6 +215,11 @@ namespace superShopManagementSystem.forms
         private void buttonClear_Click(object sender, EventArgs e)
         {
             custTable.Clear();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

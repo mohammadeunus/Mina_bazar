@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(salesmanHomePage_productEntry));
             this.label2 = new System.Windows.Forms.Label();
             this.totalBill = new System.Windows.Forms.Label();
             this.textBoxTotalBill = new System.Windows.Forms.TextBox();
@@ -52,6 +53,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.textBoxTotalItem = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +73,7 @@
             // totalBill
             // 
             this.totalBill.AutoSize = true;
-            this.totalBill.Location = new System.Drawing.Point(366, 409);
+            this.totalBill.Location = new System.Drawing.Point(433, 410);
             this.totalBill.Name = "totalBill";
             this.totalBill.Size = new System.Drawing.Size(57, 15);
             this.totalBill.TabIndex = 36;
@@ -76,9 +81,9 @@
             // 
             // textBoxTotalBill
             // 
-            this.textBoxTotalBill.Location = new System.Drawing.Point(444, 406);
+            this.textBoxTotalBill.Location = new System.Drawing.Point(496, 406);
             this.textBoxTotalBill.Name = "textBoxTotalBill";
-            this.textBoxTotalBill.Size = new System.Drawing.Size(136, 23);
+            this.textBoxTotalBill.Size = new System.Drawing.Size(84, 23);
             this.textBoxTotalBill.TabIndex = 35;
             // 
             // label3
@@ -277,6 +282,33 @@
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // textBoxTotalItem
+            // 
+            this.textBoxTotalItem.Location = new System.Drawing.Point(314, 406);
+            this.textBoxTotalItem.Name = "textBoxTotalItem";
+            this.textBoxTotalItem.Size = new System.Drawing.Size(84, 23);
+            this.textBoxTotalItem.TabIndex = 35;
+            this.textBoxTotalItem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(248, 410);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 15);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Total Item :";
+            // 
             // salesmanHomePage_productEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -291,7 +323,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.unitPrice);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.totalBill);
+            this.Controls.Add(this.textBoxTotalItem);
             this.Controls.Add(this.textBoxTotalBill);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -344,5 +378,9 @@
         private Label label9;
         private Label label10;
         private Button buttonClear;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
+        private TextBox textBoxTotalItem;
+        private Label label11;
     }
 }
