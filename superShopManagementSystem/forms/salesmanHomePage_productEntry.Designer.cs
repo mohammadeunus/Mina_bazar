@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -119,20 +120,20 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 241);
+            this.dataGridView1.Location = new System.Drawing.Point(243, 225);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(413, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(413, 175);
             this.dataGridView1.TabIndex = 25;
             // 
             // buttonPrint
             // 
             this.buttonPrint.BackColor = System.Drawing.Color.Silver;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.buttonPrint.Location = new System.Drawing.Point(663, 241);
+            this.buttonPrint.Location = new System.Drawing.Point(663, 225);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(54, 159);
+            this.buttonPrint.Size = new System.Drawing.Size(54, 104);
             this.buttonPrint.TabIndex = 23;
             this.buttonPrint.Text = "Print";
             this.buttonPrint.UseVisualStyleBackColor = false;
@@ -263,6 +264,18 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "..  ";
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Silver;
+            this.buttonClear.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonClear.Location = new System.Drawing.Point(663, 335);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(54, 65);
+            this.buttonClear.TabIndex = 23;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            // 
             // salesmanHomePage_productEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -290,6 +303,7 @@
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonAddProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -328,5 +342,6 @@
         private Label label7;
         private Label label9;
         private Label label10;
+        private Button buttonClear;
     }
 }

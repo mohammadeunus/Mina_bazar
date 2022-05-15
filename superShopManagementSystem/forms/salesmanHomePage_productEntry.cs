@@ -15,12 +15,63 @@ namespace superShopManagementSystem.forms
     {
         string? bk_update;
 
+        //table create
+        DataTable custTable = new DataTable();
+        DataColumn? dtColumn;
+        DataRow? myDataRow;
+
+
         Connection CN = new Connection();
         public salesmanHomePage_productEntry()
         {
             InitializeComponent();
             saleSummery("SELECT * FROM productlist");
+            createTable();
         }
+
+        void createTable()
+        {
+            // Create customerName column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(string);
+            dtColumn.ColumnName = "customerName";
+            dtColumn.Caption = "customerName";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = false;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+
+            // Create billid column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(Int32);
+            dtColumn.ColumnName = "billid";
+            dtColumn.Caption = "billid";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = false;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+
+            // Create productName column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(string);
+            dtColumn.ColumnName = "productName";
+            dtColumn.Caption = "productName";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = true;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+
+            // Create productQuantity column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(Int32);
+            dtColumn.ColumnName = "prodqty";
+            dtColumn.Caption = "prodqty";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = false;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+        }
+
         void saleSummery(string querry)
         {
             Date.Text = DateTime.Now.ToString();
@@ -60,11 +111,6 @@ namespace superShopManagementSystem.forms
 
         }
 
-        private void buttonPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxProductName_TextChanged(object sender, EventArgs e)
         {
             try
@@ -92,78 +138,37 @@ namespace superShopManagementSystem.forms
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            int i;
+
+            label6.Text = "asdfasdfasd";
             //check product available in list or not
             try
             {
-                bk_update = "SELECT * FROM productlist where productname= '" + textBoxProductName.Text + "'";
+                bk_update = "SELECT unitprice FROM productlist where productname= '" + textBoxProductName.Text + "'";
                 CN.thisConnection.Open();
-                SqlCommand cmd = new SqlCommand(bk_update, CN.thisConnection);
 
-                i = cmd.ExecuteNonQuery();
+                SqlCommand sdaa = new SqlCommand(bk_update, CN.thisConnection);
 
-                CN.thisConnection.Close();
-                if (i > 0)
-                {
-                    label6.Text = textBoxProductName.Text + " is not available in the inventory";
+                SqlDataReader da = sdaa.ExecuteReader();
+                 
+                if (da.HasRows)
+                { 
+                    CN.thisConnection.Close();
+                    dataGridView1.DataSource = dataIntoTable();
                 }
                 else
-                { 
-                    dataGridView1.DataSource = trythis();
-                }
-                  
+                {
+                    label6.Text = textBoxProductName.Text + " is not available in the inventory";
+                } 
+                CN.thisConnection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            } 
+            }
             
-            DataTable trythis()
-            { 
-                DataTable custTable = new DataTable();
-                DataColumn dtColumn;
-                DataRow myDataRow;
-
-                // Create customerName column
-                dtColumn = new DataColumn();
-                dtColumn.DataType = typeof(string);
-                dtColumn.ColumnName = "customerName";
-                dtColumn.Caption = "customerName";
-                dtColumn.ReadOnly = false;
-                dtColumn.Unique = true;
-                // Add column to the DataColumnCollection.
-                custTable.Columns.Add(dtColumn);
-
-                // Create billid column
-                dtColumn = new DataColumn();
-                dtColumn.DataType = typeof(Int32);
-                dtColumn.ColumnName = "billid";
-                dtColumn.Caption = "billid";
-                dtColumn.ReadOnly = false;
-                dtColumn.Unique = false;
-                // Add column to the DataColumnCollection.
-                custTable.Columns.Add(dtColumn);
-
-                // Create productName column
-                dtColumn = new DataColumn();
-                dtColumn.DataType = typeof(string);
-                dtColumn.ColumnName = "productName";
-                dtColumn.Caption = "productName";
-                dtColumn.ReadOnly = false;
-                dtColumn.Unique = true;
-                // Add column to the DataColumnCollection.
-                custTable.Columns.Add(dtColumn);
-
-                // Create productQuantity column
-                dtColumn = new DataColumn();
-                dtColumn.DataType = typeof(Int32);
-                dtColumn.ColumnName = "prodqty";
-                dtColumn.Caption = "prodqty";
-                dtColumn.ReadOnly = false;
-                dtColumn.Unique = false;
-                // Add column to the DataColumnCollection.
-                custTable.Columns.Add(dtColumn);
-
+            
+            DataTable dataIntoTable()
+            {   
                 //adding new row
                 myDataRow = custTable.NewRow();
                 myDataRow["CustomerName"] = textBoxCustomerName.Text;
@@ -174,6 +179,11 @@ namespace superShopManagementSystem.forms
 
                 return custTable;
             }
+
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
 
         }
     }
