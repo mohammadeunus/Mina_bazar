@@ -33,12 +33,12 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonAddProduct = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxBillid = new System.Windows.Forms.TextBox();
             this.textBoxProductName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -98,12 +98,12 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Unit price :";
             // 
-            // textBox1
+            // textBoxQuantity
             // 
-            this.textBox1.Location = new System.Drawing.Point(382, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 23);
-            this.textBox1.TabIndex = 29;
+            this.textBoxQuantity.Location = new System.Drawing.Point(382, 152);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(140, 23);
+            this.textBoxQuantity.TabIndex = 29;
             // 
             // dataGridView2
             // 
@@ -151,12 +151,12 @@
             this.buttonAddProduct.UseVisualStyleBackColor = false;
             this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
             // 
-            // textBox3
+            // textBoxBillid
             // 
-            this.textBox3.Location = new System.Drawing.Point(382, 94);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 23);
-            this.textBox3.TabIndex = 29;
+            this.textBoxBillid.Location = new System.Drawing.Point(382, 94);
+            this.textBoxBillid.Name = "textBoxBillid";
+            this.textBoxBillid.Size = new System.Drawing.Size(140, 23);
+            this.textBoxBillid.TabIndex = 29;
             // 
             // textBoxProductName
             // 
@@ -286,8 +286,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.textBoxCustomerName);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBillid);
+            this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonPrint);
@@ -310,12 +310,12 @@
         private TextBox textBox5;
         private Label label3;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textBoxQuantity;
         private DataGridView dataGridView2;
         private DataGridView dataGridView1;
         private Button buttonPrint;
         private Button buttonAddProduct;
-        private TextBox textBox3;
+        private TextBox textBoxBillid;
         private TextBox textBoxProductName;
         private Label label4;
         private Label label5;
