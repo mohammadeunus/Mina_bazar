@@ -20,6 +20,8 @@ namespace superShopManagementSystem.forms
         DataColumn? dtColumn;
         DataRow? myDataRow;
         salesmanHomePage_print shp;
+        //total
+        long totalPrice, totalQty;
 
         Connection CN = new Connection();
         private int prc;
@@ -73,6 +75,16 @@ namespace superShopManagementSystem.forms
             // Add column to the DataColumnCollection.
             custTable.Columns.Add(dtColumn);
 
+            // Create unitprice column
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(Int32);
+            dtColumn.ColumnName = "unitprice";
+            dtColumn.Caption = "unitprice";
+            dtColumn.ReadOnly = false;
+            dtColumn.Unique = false;
+            // Add column to the DataColumnCollection.
+            custTable.Columns.Add(dtColumn);
+
             // Create price column
             dtColumn = new DataColumn();
             dtColumn.DataType = typeof(Int32);
@@ -99,7 +111,7 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("salesummer: " + ex.Message);
             }
         }
     
@@ -176,7 +188,7 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("buttonaddproduct: "+ex.Message);
             }
             
             
@@ -188,12 +200,15 @@ namespace superShopManagementSystem.forms
                 myDataRow["billid"] = textBoxBillid.Text;
                 myDataRow["productname"] = textBoxProductName.Text;
                 myDataRow["prodqty"] = textBoxQuantity.Text;
+                myDataRow["unitprice"] = (int)prc;
                 myDataRow["price"] = (int)myDataRow["prodqty"]*prc ;
                 custTable.Rows.Add(myDataRow);
-
-                textBoxTotalBill.Text = (custTable.Compute("SUM(Price)", string.Empty)).ToString();
-                textBoxTotalItem.Text = (custTable.Compute("SUM(prodqty)", string.Empty)).ToString();
-
+                
+                //totalPrice = (int)(custTable.Compute("SUM(Price)", string.Empty));
+                //totalQty= (int)(custTable.Compute("SUM(prodqty)", string.Empty));
+                textBoxTotalItem.Text = totalQty.ToString();
+                textBoxTotalBill.Text = totalPrice.ToString();
+               
                 return custTable;
             }
 
@@ -203,8 +218,8 @@ namespace superShopManagementSystem.forms
         {
             if (custTable.Rows.Count > 0)
             {
-                shp = new salesmanHomePage_print();
-                shp.Show();
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
             }
             else
             {
@@ -220,6 +235,37 @@ namespace superShopManagementSystem.forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        // ////////////////////////// printout / receipt of the ordered list by cutomer ////////////////////////////////////////////
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            int nextLine= 120;
+            e.Graphics.DrawString("SUPERSHOPMANAGEMENT SYSTEM", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, nextLine)); 
+            e.Graphics.DrawString("___________________________________", new Font("Arial", 20), Brushes.Black, new Point(175, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("sale receipt", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(380, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("PRINCIPLE ABUL KALAM ROAD, MIPRPUR-1", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(200, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("DHAKA-1216", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(380, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("CONTACT NUMBER: +88-01521430101", new Font("Arial", 16), Brushes.Black, new Point(220, nextLine));
+            nextLine += 75;
+            e.Graphics.DrawString("__________________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine)); 
+            e.Graphics.DrawString("Product Name      Product Quantity      Unit Price      Total price", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+            nextLine += 30;
+            foreach (DataRow row in custTable.Rows)
+            {
+                nextLine += 30;
+                e.Graphics.DrawString(row["productname"] +"    "+ row["prodqty"] + "    " + row["unitprice"] + "    " + row["price"] , new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+               
+            }
+            nextLine += 30;
+            e.Graphics.DrawString("_______________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("Total quantity: " + totalQty+"      Total price: "+ totalPrice, new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
         }
     }
 }
