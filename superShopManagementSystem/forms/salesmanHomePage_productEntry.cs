@@ -244,11 +244,10 @@ namespace superShopManagementSystem.forms
         }
 
         // ////////////////////////// printout / receipt of the ordered list by cutomer ////////////////////////////////////////////
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        void printReceipt(System.Drawing.Printing.PrintPageEventArgs e)
         {
-            int nextLine= 120;
-            e.Graphics.DrawString("MINA BAZAR", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(360, nextLine)); 
+            int nextLine = 120;
+            e.Graphics.DrawString("MINA BAZAR", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(360, nextLine));
             e.Graphics.DrawString("___________________________________", new Font("Arial", 20), Brushes.Black, new Point(175, nextLine));
             nextLine += 30;
             e.Graphics.DrawString("sale receipt", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(380, nextLine));
@@ -262,24 +261,39 @@ namespace superShopManagementSystem.forms
 
             e.Graphics.DrawString("Bill id : " + Billid, new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
             nextLine += 30;
-            e.Graphics.DrawString("Receipt issued to : "+ customername, new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
+            e.Graphics.DrawString("Receipt issued to : " + customername, new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
             nextLine += 30;
             e.Graphics.DrawString("Receipt issuing date : " + DateTime.Now.ToString(), new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
 
 
             nextLine += 75;
-            e.Graphics.DrawString("__________________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine)); 
+            e.Graphics.DrawString("__________________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
             e.Graphics.DrawString("Product Name      Product Quantity      Unit Price      Total price", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
             nextLine += 30;
             foreach (DataRow row in custTable.Rows)
             {
                 nextLine += 30;
-                e.Graphics.DrawString(row["productname"] +"    "+ row["prodqty"] + "    " + row["unitprice"] + "    " + row["price"] , new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+                e.Graphics.DrawString(row["productname"] + "    " + row["prodqty"] + "    " + row["unitprice"] + "    " + row["price"], new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
             }
             nextLine += 30;
             e.Graphics.DrawString("_______________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
             nextLine += 30;
-            e.Graphics.DrawString("Total quantity: " + totalQty+"      Total price: "+ totalPrice, new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+            e.Graphics.DrawString("Total quantity: " + totalQty + "      Total price: " + totalPrice, new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
+
         }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            printReceipt(e);
+            custTable.Clear();
+            //upload this data into the server
+
+        }
+
     }
 }
