@@ -204,8 +204,8 @@ namespace superShopManagementSystem.forms
                 myDataRow["price"] = (int)myDataRow["prodqty"]*prc ;
                 custTable.Rows.Add(myDataRow);
                 
-                //totalPrice = (int)(custTable.Compute("SUM(Price)", string.Empty));
-                //totalQty= (int)(custTable.Compute("SUM(prodqty)", string.Empty));
+                totalPrice = (long)(custTable.Compute("SUM(Price)", string.Empty));
+                totalQty= (long)(custTable.Compute("SUM(prodqty)", string.Empty));
                 textBoxTotalItem.Text = totalQty.ToString();
                 textBoxTotalBill.Text = totalPrice.ToString();
                
