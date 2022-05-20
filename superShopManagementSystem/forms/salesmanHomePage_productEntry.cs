@@ -286,8 +286,6 @@ namespace superShopManagementSystem.forms
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            printReceipt(e); 
-
             try
             {
                 bk_update = "insert into sellrecord(customerBillid, sellerName, billDate, totalBill, customerName) values('" + Billid + "' , '" + seller + "', '" + DateTime.Now + "', '" + totalPrice + "' , '" + customername + "' ) ";
@@ -300,6 +298,7 @@ namespace superShopManagementSystem.forms
                 CN.thisConnection.Close();
                 if (i == 1)
                 {
+                    printReceipt(e);
                     label10.Text=("datasaved");
                     custTable.Clear();
                 }
@@ -307,6 +306,8 @@ namespace superShopManagementSystem.forms
             catch (Exception ex)
             {
                 MessageBox.Show("printDocument1_PrintPage: " + ex.Message);
+
+                CN.thisConnection.Close();
             }
 
 
