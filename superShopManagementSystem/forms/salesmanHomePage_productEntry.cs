@@ -225,9 +225,31 @@ namespace superShopManagementSystem.forms
         {
             if (custTable.Rows.Count > 0)
             {
-                printPreviewDialog1.Document = printDocument1;
-                printPreviewDialog1.ShowDialog();
+                try
+                {
+                    bk_update = "insert into sellrecord(customerBillid, sellerName, billDate, totalBill, customerName) values('" + Billid + "' , '" + seller + "', '" + DateTime.Now + "', '" + totalPrice + "' , '" + customername + "' ) ";
+                    CN.thisConnection.Open();
 
+                    SqlCommand cmd = new SqlCommand(bk_update, CN.thisConnection);
+
+                    int i = cmd.ExecuteNonQuery();
+
+                    CN.thisConnection.Close();
+                    if (i == 1)
+                    {
+                        printPreviewDialog1.Document = printDocument1;
+                        printPreviewDialog1.ShowDialog();
+                        label10.Text = ("datasaved");
+                        custTable.Clear();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("printDocument1_PrintPage: " + ex.Message);
+
+                    CN.thisConnection.Close();
+                }
+                 
             }
             else
             {
@@ -246,9 +268,10 @@ namespace superShopManagementSystem.forms
         }
 
         // ////////////////////////// printout / receipt of the ordered list by cutomer ////////////////////////////////////////////
-        void printReceipt(System.Drawing.Printing.PrintPageEventArgs e)
+ 
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            int nextLine = 120;
+             int nextLine = 120;
             e.Graphics.DrawString("MINA BAZAR", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(360, nextLine));
             e.Graphics.DrawString("___________________________________", new Font("Arial", 20), Brushes.Black, new Point(175, nextLine));
             nextLine += 30;
@@ -281,34 +304,6 @@ namespace superShopManagementSystem.forms
             e.Graphics.DrawString("_______________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
             nextLine += 30;
             e.Graphics.DrawString("Total quantity: " + totalQty + "      Total price: " + totalPrice, new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
-
-
-        }
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            try
-            {
-                bk_update = "insert into sellrecord(customerBillid, sellerName, billDate, totalBill, customerName) values('" + Billid + "' , '" + seller + "', '" + DateTime.Now + "', '" + totalPrice + "' , '" + customername + "' ) ";
-                CN.thisConnection.Open();
-
-                SqlCommand cmd = new SqlCommand(bk_update, CN.thisConnection);
-
-                int i = cmd.ExecuteNonQuery();
-
-                CN.thisConnection.Close();
-                if (i == 1)
-                {
-                    printReceipt(e);
-                    label10.Text=("datasaved");
-                    custTable.Clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("printDocument1_PrintPage: " + ex.Message);
-
-                CN.thisConnection.Close();
-            }
 
 
         }

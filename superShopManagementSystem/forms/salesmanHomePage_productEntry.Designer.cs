@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(salesmanHomePage_productEntry));
             this.label2 = new System.Windows.Forms.Label();
             this.totalBill = new System.Windows.Forms.Label();
-            this.textBoxTotalBill = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
@@ -55,8 +54,9 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.textBoxTotalItem = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBoxTotalBill = new System.Windows.Forms.Label();
+            this.textBoxTotalItem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(583, 410);
+            this.label2.Location = new System.Drawing.Point(566, 410);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 15);
             this.label2.TabIndex = 40;
@@ -73,18 +73,11 @@
             // totalBill
             // 
             this.totalBill.AutoSize = true;
-            this.totalBill.Location = new System.Drawing.Point(433, 410);
+            this.totalBill.Location = new System.Drawing.Point(445, 410);
             this.totalBill.Name = "totalBill";
             this.totalBill.Size = new System.Drawing.Size(57, 15);
             this.totalBill.TabIndex = 36;
             this.totalBill.Text = "Total Bill :";
-            // 
-            // textBoxTotalBill
-            // 
-            this.textBoxTotalBill.Location = new System.Drawing.Point(496, 406);
-            this.textBoxTotalBill.Name = "textBoxTotalBill";
-            this.textBoxTotalBill.Size = new System.Drawing.Size(84, 23);
-            this.textBoxTotalBill.TabIndex = 35;
             // 
             // label3
             // 
@@ -296,14 +289,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // textBoxTotalItem
-            // 
-            this.textBoxTotalItem.Location = new System.Drawing.Point(314, 406);
-            this.textBoxTotalItem.Name = "textBoxTotalItem";
-            this.textBoxTotalItem.Size = new System.Drawing.Size(84, 23);
-            this.textBoxTotalItem.TabIndex = 35;
-            this.textBoxTotalItem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -312,6 +297,24 @@
             this.label11.Size = new System.Drawing.Size(65, 15);
             this.label11.TabIndex = 36;
             this.label11.Text = "Total Item :";
+            // 
+            // textBoxTotalBill
+            // 
+            this.textBoxTotalBill.AutoSize = true;
+            this.textBoxTotalBill.Location = new System.Drawing.Point(508, 410);
+            this.textBoxTotalBill.Name = "textBoxTotalBill";
+            this.textBoxTotalBill.Size = new System.Drawing.Size(40, 15);
+            this.textBoxTotalBill.TabIndex = 41;
+            this.textBoxTotalBill.Text = ".. .. .. ..";
+            // 
+            // textBoxTotalItem
+            // 
+            this.textBoxTotalItem.AutoSize = true;
+            this.textBoxTotalItem.Location = new System.Drawing.Point(319, 410);
+            this.textBoxTotalItem.Name = "textBoxTotalItem";
+            this.textBoxTotalItem.Size = new System.Drawing.Size(40, 15);
+            this.textBoxTotalItem.TabIndex = 41;
+            this.textBoxTotalItem.Text = ".. .. .. ..";
             // 
             // salesmanHomePage_productEntry
             // 
@@ -325,12 +328,12 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxTotalBill);
+            this.Controls.Add(this.textBoxTotalItem);
             this.Controls.Add(this.unitPrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.totalBill);
-            this.Controls.Add(this.textBoxTotalItem);
-            this.Controls.Add(this.textBoxTotalBill);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CustomerName);
@@ -360,7 +363,6 @@
 
         private Label label2;
         private Label totalBill;
-        private TextBox textBoxTotalBill;
         private Label label3;
         private Label label1;
         private TextBox textBoxQuantity;
@@ -384,7 +386,8 @@
         private Button buttonClear;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
-        private TextBox textBoxTotalItem;
         private Label label11;
+        private Label textBoxTotalBill;
+        private Label textBoxTotalItem;
     }
 }
