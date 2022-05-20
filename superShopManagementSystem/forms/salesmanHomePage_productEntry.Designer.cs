@@ -57,6 +57,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxTotalBill = new System.Windows.Forms.Label();
             this.textBoxTotalItem = new System.Windows.Forms.Label();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -144,7 +145,7 @@
             this.buttonAddProduct.Location = new System.Drawing.Point(545, 64);
             this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(68, 111);
+            this.buttonAddProduct.Size = new System.Drawing.Size(68, 74);
             this.buttonAddProduct.TabIndex = 22;
             this.buttonAddProduct.Text = "Add product";
             this.buttonAddProduct.UseVisualStyleBackColor = false;
@@ -316,6 +317,19 @@
             this.textBoxTotalItem.TabIndex = 41;
             this.textBoxTotalItem.Text = ".. .. .. ..";
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.Silver;
+            this.buttonUpdate.Font = new System.Drawing.Font("Segoe Script", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.buttonUpdate.Location = new System.Drawing.Point(545, 144);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(68, 31);
+            this.buttonUpdate.TabIndex = 22;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonAddProduct_Click);
+            // 
             // salesmanHomePage_productEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -347,6 +361,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonPrint);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonAddProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "salesmanHomePage_productEntry";
@@ -389,5 +404,6 @@
         private Label label11;
         private Label textBoxTotalBill;
         private Label textBoxTotalItem;
+        private Button buttonUpdate;
     }
 }

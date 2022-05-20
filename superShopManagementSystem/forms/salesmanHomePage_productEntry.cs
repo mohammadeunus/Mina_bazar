@@ -114,6 +114,7 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
+                CN.thisConnection.Close();
                 MessageBox.Show("salesummer: " + ex.Message);
             }
         }
@@ -163,25 +164,39 @@ namespace superShopManagementSystem.forms
             catch (Exception ex)
             {
                 //
+                CN.thisConnection.Close();
             }
         }
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
+            string prodName= textBoxProductName.Text;
             //check product available in list or not
             try
             {
-                bk_update = "SELECT unitprice FROM productlist where productname= '" + textBoxProductName.Text + "'";
+                bk_update = "SELECT unitprice, prodQTY FROM productlist where productname= '" + prodName + "'";
                 CN.thisConnection.Open();
 
-                SqlCommand sdaa = new SqlCommand(bk_update, CN.thisConnection);
+                SqlDataAdapter sdaa = new SqlDataAdapter(bk_update, CN.thisConnection);
+                  
+                DataTable dtable = new DataTable();
+                sdaa.Fill(dtable);
 
-                SqlDataReader da = sdaa.ExecuteReader();
-
-                if (da.HasRows)
+                if (dtable.Rows.Count > 0)
                 {
                     CN.thisConnection.Close();
-                    dataGridView1.DataSource = dataIntoTable();
+                    int orderedQTY = Int32.Parse(textBoxQuantity.Text);
+                    int INventoryQty= Int32.Parse(dtable.Rows[0]["prodQTY"].ToString());
+                    //check if the inventory has enough resource for the order to confirm or proceed
+                    if (orderedQTY < INventoryQty)
+                    {
+                        dataGridView1.DataSource = dataIntoTable();
+                        updateInventory(prodName, INventoryQty-orderedQTY);
+                    }
+                    else
+                    {
+                        MessageBox.Show("buttonaddproduct: you have ordered more than the inventory has");
+                    }
                 }
                 else
                 {
@@ -191,7 +206,9 @@ namespace superShopManagementSystem.forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("buttonaddproduct: " + ex.Message);
+                MessageBox.Show("buttonaddproduct exception: " + ex.Message);
+
+                CN.thisConnection.Close();
             }
 
 
@@ -221,6 +238,30 @@ namespace superShopManagementSystem.forms
 
         }
 
+        private void updateInventory(string prodName, int v)
+        {
+            try
+            {
+                bk_update = "UPDATE productlist SET  prodqty = '" + v + "' where productname = '" + prodName + "' ";
+                CN.thisConnection.Open();
+                SqlCommand cmcd = new SqlCommand(bk_update, CN.thisConnection);
+
+                cmcd.ExecuteNonQuery();
+
+                CN.thisConnection.Close();
+                label10.Text = prodName + " Data updated";
+
+                saleSummery("SELECT * FROM productlist");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            //throw new NotImplementedException();
+        }
+
+        // ////////////////////////// printout / receipt of the ordered list by cutomer ////////////////////////////////////////////
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             if (custTable.Rows.Count > 0)
@@ -267,7 +308,6 @@ namespace superShopManagementSystem.forms
 
         }
 
-        // ////////////////////////// printout / receipt of the ordered list by cutomer ////////////////////////////////////////////
  
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
