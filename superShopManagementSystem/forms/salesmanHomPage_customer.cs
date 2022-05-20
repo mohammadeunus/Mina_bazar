@@ -49,6 +49,16 @@ namespace superShopManagementSystem.forms
 
         }
 
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saleSummery();
+        }
+
         private void textBoxAddcusotomer_TextChanged(object sender, EventArgs e)
         {
             try

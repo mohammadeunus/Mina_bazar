@@ -13,11 +13,14 @@ namespace superShopManagementSystem.forms
 {
     public partial class salesmanHomePage : Form
     {
-        salesmanHomePage_productEntry sl1 = new salesmanHomePage_productEntry();
+        string? sellername;
+        salesmanHomePage_productEntry sl1 ;
         salesmanHomPage_customer sl2 = new salesmanHomPage_customer();
         homeUsers hmpg; 
         public salesmanHomePage(homeUsers homePage, string name)
-        { 
+        {
+            sl1 = new salesmanHomePage_productEntry(sellername);
+            sellername = name;
             this.hmpg = homePage;
             InitializeComponent();
             loadform(sl2);

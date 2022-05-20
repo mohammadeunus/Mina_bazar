@@ -34,13 +34,14 @@
             this.textBoxAddcusotomer = new System.Windows.Forms.TextBox();
             this.Date = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // sellerList
             // 
             this.sellerList.AutoSize = true;
-            this.sellerList.Location = new System.Drawing.Point(538, 117);
+            this.sellerList.Location = new System.Drawing.Point(538, 112);
             this.sellerList.Name = "sellerList";
             this.sellerList.Size = new System.Drawing.Size(80, 15);
             this.sellerList.TabIndex = 19;
@@ -50,24 +51,25 @@
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(68, 135);
+            this.dataGridView3.Location = new System.Drawing.Point(68, 130);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 25;
             this.dataGridView3.Size = new System.Drawing.Size(550, 245);
             this.dataGridView3.TabIndex = 18;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(68, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 15);
+            this.label1.Size = new System.Drawing.Size(138, 15);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Customer Name :";
+            this.label1.Text = "Search Customer Name :";
             // 
             // textBoxAddcusotomer
             // 
-            this.textBoxAddcusotomer.Location = new System.Drawing.Point(185, 71);
+            this.textBoxAddcusotomer.Location = new System.Drawing.Point(231, 71);
             this.textBoxAddcusotomer.Name = "textBoxAddcusotomer";
             this.textBoxAddcusotomer.Size = new System.Drawing.Size(140, 23);
             this.textBoxAddcusotomer.TabIndex = 21;
@@ -92,12 +94,23 @@
             this.errorLabel.TabIndex = 44;
             this.errorLabel.Text = "...";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(538, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // salesmanHomPage_customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(702, 441);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.Date);
             this.Controls.Add(this.label1);
@@ -121,5 +134,6 @@
         private TextBox textBoxAddcusotomer;
         private Label Date;
         private Label errorLabel;
+        private Button button1;
     }
 }
