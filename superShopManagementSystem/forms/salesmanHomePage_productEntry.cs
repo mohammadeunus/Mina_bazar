@@ -25,6 +25,8 @@ namespace superShopManagementSystem.forms
 
         Connection CN = new Connection();
         private int prc;
+        private string Billid;
+        private string customername;
 
         public salesmanHomePage_productEntry()
         {
@@ -203,9 +205,13 @@ namespace superShopManagementSystem.forms
                 myDataRow["unitprice"] = (int)prc;
                 myDataRow["price"] = (int)myDataRow["prodqty"]*prc ;
                 custTable.Rows.Add(myDataRow);
-                
+
+                //information for receipt making................
+                Billid = textBoxBillid.Text;
+                customername = textBoxCustomerName.Text;
                 totalPrice = (long)(custTable.Compute("SUM(Price)", string.Empty));
                 totalQty= (long)(custTable.Compute("SUM(prodqty)", string.Empty));
+
                 textBoxTotalItem.Text = totalQty.ToString();
                 textBoxTotalBill.Text = totalPrice.ToString();
                
@@ -242,7 +248,7 @@ namespace superShopManagementSystem.forms
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             int nextLine= 120;
-            e.Graphics.DrawString("SUPERSHOPMANAGEMENT SYSTEM", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(185, nextLine)); 
+            e.Graphics.DrawString("MINA BAZAR", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(360, nextLine)); 
             e.Graphics.DrawString("___________________________________", new Font("Arial", 20), Brushes.Black, new Point(175, nextLine));
             nextLine += 30;
             e.Graphics.DrawString("sale receipt", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(380, nextLine));
@@ -251,7 +257,16 @@ namespace superShopManagementSystem.forms
             nextLine += 30;
             e.Graphics.DrawString("DHAKA-1216", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(380, nextLine));
             nextLine += 30;
-            e.Graphics.DrawString("CONTACT NUMBER: +88-01521430101", new Font("Arial", 16), Brushes.Black, new Point(220, nextLine));
+            e.Graphics.DrawString("CONTACT NUMBER: +88-01521430101", new Font("Arial", 16), Brushes.Black, new Point(230, nextLine));
+            nextLine += 60;
+
+            e.Graphics.DrawString("Bill id : " + Billid, new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("Receipt issued to : "+ customername, new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
+            nextLine += 30;
+            e.Graphics.DrawString("Receipt issuing date : " + DateTime.Now.ToString(), new Font("Arial", 16), Brushes.Black, new Point(70, nextLine));
+
+
             nextLine += 75;
             e.Graphics.DrawString("__________________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine)); 
             e.Graphics.DrawString("Product Name      Product Quantity      Unit Price      Total price", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
@@ -260,7 +275,6 @@ namespace superShopManagementSystem.forms
             {
                 nextLine += 30;
                 e.Graphics.DrawString(row["productname"] +"    "+ row["prodqty"] + "    " + row["unitprice"] + "    " + row["price"] , new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
-               
             }
             nextLine += 30;
             e.Graphics.DrawString("_______________________________________________", new Font("Arial", 15), Brushes.Black, new Point(70, nextLine));
